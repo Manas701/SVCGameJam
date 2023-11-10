@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bo7j7ta6878l0"]
+
+[ext_resource type="ArrayMesh" uid="uid://jwl3cfn8efty" path="res://models_obj/CarBlue.obj" id="1_ki60v"]
+[ext_resource type="Material" uid="uid://cfrmr730rvkhs" path="res://models_obj/textures/textureMaterial.tres" id="2_qpanl"]
+
+[node name="CarBlue" type="MeshInstance3D"]
+mesh = ExtResource("1_ki60v")
+surface_material_override/0 = ExtResource("2_qpanl")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
