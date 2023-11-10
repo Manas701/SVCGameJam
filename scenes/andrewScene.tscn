@@ -1,10 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://dn0f5hple32ht"]
+[gd_scene load_steps=4 format=3 uid="uid://dn0f5hple32ht"]
 
 [ext_resource type="PackedScene" uid="uid://hpv7wre553nk" path="res://prefabs/bat.tscn" id="1_8ue85"]
 [ext_resource type="Script" path="res://assets/scripts/bat.gd" id="2_351hp"]
+[ext_resource type="ArrayMesh" uid="uid://b1jp07yfln0sr" path="res://models_obj/CarBlack.obj" id="3_oj6h6"]
 
 [node name="andrewScene" type="Node3D"]
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_8ue85")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.925095, 0.675642, 1.62355)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.925095, 0.667295, -0.00408089)
 script = ExtResource("2_351hp")
+
+[node name="CarBlack" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.72135, 0, -0.0727646)
+mesh = ExtResource("3_oj6h6")
