@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bl75dqgvnvmti"
+path="res://.godot/imported/CarWhite.obj-7218fc2b537b15362f63751193b070ab.mesh"
+
+[deps]
+
+files=["res://.godot/imported/CarWhite.obj-7218fc2b537b15362f63751193b070ab.mesh"]
+
+source_file="res://assets/3DAssets/models_obj/CarWhite.obj"
+dest_files=["res://.godot/imported/CarWhite.obj-7218fc2b537b15362f63751193b070ab.mesh", "res://.godot/imported/CarWhite.obj-7218fc2b537b15362f63751193b070ab.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

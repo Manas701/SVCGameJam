@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://jwl3cfn8efty"
+path="res://.godot/imported/CarBlue.obj-54024cefb7decc3edbe591a3aa00c21e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/CarBlue.obj-54024cefb7decc3edbe591a3aa00c21e.mesh"]
+
+source_file="res://assets/3DAssets/models_obj/CarBlue.obj"
+dest_files=["res://.godot/imported/CarBlue.obj-54024cefb7decc3edbe591a3aa00c21e.mesh", "res://.godot/imported/CarBlue.obj-54024cefb7decc3edbe591a3aa00c21e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

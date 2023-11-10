@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bqpi88rwngoih"]
 
-[ext_resource type="ArrayMesh" uid="uid://dg14eh0f18w8f" path="res://models_obj/CarRed.obj" id="1_y5sjs"]
+[ext_resource type="ArrayMesh" uid="uid://dg14eh0f18w8f" path="res://assets/3DAssets/models_obj/CarRed.obj" id="1_y5sjs"]
 [ext_resource type="Material" uid="uid://cfrmr730rvkhs" path="res://models_obj/textures/textureMaterial.tres" id="2_e2628"]
 
 [node name="CarRed" type="MeshInstance3D"]

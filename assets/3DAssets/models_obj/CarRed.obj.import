@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dg14eh0f18w8f"
+path="res://.godot/imported/CarRed.obj-56e814e54e338a3be0784743f000e027.mesh"
+
+[deps]
+
+files=["res://.godot/imported/CarRed.obj-56e814e54e338a3be0784743f000e027.mesh"]
+
+source_file="res://assets/3DAssets/models_obj/CarRed.obj"
+dest_files=["res://.godot/imported/CarRed.obj-56e814e54e338a3be0784743f000e027.mesh", "res://.godot/imported/CarRed.obj-56e814e54e338a3be0784743f000e027.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
