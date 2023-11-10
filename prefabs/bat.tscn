@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://hpv7wre553nk"]
+
+[ext_resource type="ArrayMesh" uid="uid://dcytc4257l6ai" path="res://models_obj/Bat.obj" id="1_usse7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_djq2y"]
+size = Vector3(0.177438, 1.01405, 0.199464)
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_usse7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.518001, 0)
+shape = SubResource("BoxShape3D_djq2y")
