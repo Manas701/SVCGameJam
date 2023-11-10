@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://dn0f5hple32ht"]
+[gd_scene load_steps=3 format=3 uid="uid://dn0f5hple32ht"]
+
+[ext_resource type="PackedScene" uid="uid://hpv7wre553nk" path="res://prefabs/bat.tscn" id="1_8ue85"]
+[ext_resource type="Script" path="res://scripts/bat.gd" id="2_351hp"]
 
 [node name="andrewScene" type="Node3D"]
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("1_8ue85")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1341, 0, 1.92996)
+script = ExtResource("2_351hp")
