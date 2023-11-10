@@ -1,4 +1,8 @@
+extends CharacterBody3D
 
-print("hello")
+var speed = 100
+var angular_speed = PI
+
+
 
 
