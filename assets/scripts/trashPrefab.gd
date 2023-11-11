@@ -17,7 +17,8 @@ func _input(event):
 		hit()
 
 func hit():
-	anim.play("hit_center")
+#	anim.play("hit_center")
+	anim.play(get_parent().get_node("PlayerInput").whichBin)
 
 func destroy_trash(_event):
 	queue_free()
