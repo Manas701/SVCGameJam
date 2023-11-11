@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2hb0qqj1wx6s"]
+
+[ext_resource type="Environment" uid="uid://dbma0te6pw04e" path="res://prefabs/world_environment.tres" id="1_cfrd3"]
+
+[node name="WorldEnvironment" type="WorldEnvironment"]
+environment = ExtResource("1_cfrd3")

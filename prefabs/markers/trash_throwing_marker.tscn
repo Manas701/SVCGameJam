@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://ldddmw5fwpos"]
+
+[node name="TrashThrowingMarker" type="Marker3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.388306, 1.56396, 0.478614)
