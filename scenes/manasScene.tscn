@@ -1,89 +1,13 @@
-[gd_scene load_steps=13 format=3 uid="uid://cmk3w3urbdkri"]
+[gd_scene load_steps=9 format=3 uid="uid://cmk3w3urbdkri"]
 
 [ext_resource type="Script" path="res://assets/scripts/bat.gd" id="2_whjhi"]
 [ext_resource type="PackedScene" path="res://prefabs/bin_recycle.tscn" id="6_018ci"]
 [ext_resource type="PackedScene" uid="uid://hpv7wre553nk" path="res://prefabs/bat.tscn" id="7_5fts6"]
+[ext_resource type="PackedScene" uid="uid://dpvfjowh2mn4x" path="res://prefabs/animation_player.tscn" id="7_gctov"]
 [ext_resource type="PackedScene" path="res://prefabs/bin_compost.tscn" id="7_ke1kv"]
 [ext_resource type="Script" path="res://scenes/ChangingBins.gd" id="7_kxg3g"]
 [ext_resource type="PackedScene" uid="uid://tx72n0re52ye" path="res://prefabs/trash.tscn" id="7_wwkud"]
 [ext_resource type="PackedScene" path="res://prefabs/bin_trash.tscn" id="8_nec8g"]
-
-[sub_resource type="Animation" id="Animation_hn8jn"]
-length = 0.001
-
-[sub_resource type="Animation" id="Animation_ch5xh"]
-resource_name = "new_animation"
-tracks/0/type = "position_3d"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, 0, 0.25, -1.5, 0.5, 1, 0, 1.8, -3.5, 1, 1, 0, 0.9, -5)
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(0, 0, 0), Vector3(6.28319, 0, 0), Vector3(12.5664, 0, 0), Vector3(18.8496, 0, 0), Vector3(24.7837, 0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_iapdx"]
-resource_name = "hit_left"
-tracks/0/type = "position_3d"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, 0, 0.25, -1.5, 0.5, 1, -2, 1.8, -3.5, 1, 1, -4, 0.9, -5)
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(0, 0, 0), Vector3(6.28319, 0, 0), Vector3(12.5664, 0, 0), Vector3(18.8496, 0, 0), Vector3(24.7837, 0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_q1xst"]
-resource_name = "hit_right"
-tracks/0/type = "position_3d"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, 0, 0.25, -1.5, 0.5, 1, 2, 1.8, -3.5, 1, 1, 4, 0.9, -5)
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(0, 0, 0), Vector3(6.28319, 0, 0), Vector3(12.5664, 0, 0), Vector3(18.8496, 0, 0), Vector3(24.7837, 0, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_qpaf1"]
-_data = {
-"RESET": SubResource("Animation_hn8jn"),
-"hit_center": SubResource("Animation_ch5xh"),
-"hit_left": SubResource("Animation_iapdx"),
-"hit_right": SubResource("Animation_q1xst")
-}
 
 [node name="manasScene" type="Node3D"]
 
@@ -107,10 +31,7 @@ script = ExtResource("2_whjhi")
 [node name="trash" parent="." instance=ExtResource("7_wwkud")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, -1.5)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="trash"]
-libraries = {
-"": SubResource("AnimationLibrary_qpaf1")
-}
+[node name="AnimationPlayer" parent="trash" instance=ExtResource("7_gctov")]
 
 [node name="PlayerInput" type="Node" parent="."]
 script = ExtResource("7_kxg3g")

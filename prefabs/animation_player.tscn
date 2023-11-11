@@ -1,0 +1,83 @@
+[gd_scene load_steps=6 format=3 uid="uid://dpvfjowh2mn4x"]
+
+[sub_resource type="Animation" id="Animation_hn8jn"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_ch5xh"]
+resource_name = "new_animation"
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0.25, -1.5, 0.5, 1, 0, 1.8, -3.5, 1, 1, 0, 0.9, -5)
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(6.28319, 0, 0), Vector3(12.5664, 0, 0), Vector3(18.8496, 0, 0), Vector3(24.7837, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_iapdx"]
+resource_name = "hit_left"
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0.25, -1.5, 0.5, 1, -2, 1.8, -3.5, 1, 1, -4, 0.9, -5)
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(6.28319, 0, 0), Vector3(12.5664, 0, 0), Vector3(18.8496, 0, 0), Vector3(24.7837, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_q1xst"]
+resource_name = "hit_right"
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0.25, -1.5, 0.5, 1, 2, 1.8, -3.5, 1, 1, 4, 0.9, -5)
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(6.28319, 0, 0), Vector3(12.5664, 0, 0), Vector3(18.8496, 0, 0), Vector3(24.7837, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qpaf1"]
+_data = {
+"RESET": SubResource("Animation_hn8jn"),
+"hit_center": SubResource("Animation_ch5xh"),
+"hit_left": SubResource("Animation_iapdx"),
+"hit_right": SubResource("Animation_q1xst")
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer"]
+libraries = {
+"": SubResource("AnimationLibrary_qpaf1")
+}
