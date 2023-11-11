@@ -1,13 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://bqpi88rwngoih"]
+[gd_scene load_steps=5 format=3 uid="uid://bqpi88rwngoih"]
 
 [ext_resource type="ArrayMesh" uid="uid://dg14eh0f18w8f" path="res://assets/3DAssets/models_obj/CarRed.obj" id="1_y5sjs"]
 [ext_resource type="Material" uid="uid://cfrmr730rvkhs" path="res://assets/3DAssets/models_obj/textures/textureMaterial.tres" id="2_e2628"]
 [ext_resource type="PackedScene" uid="uid://ldddmw5fwpos" path="res://prefabs/markers/trash_throwing_marker.tscn" id="3_fyqt7"]
+[ext_resource type="PackedScene" uid="uid://jdfxv6wwbrt2" path="res://prefabs/car_area_3d.tscn" id="4_f0o01"]
 
 [node name="CarRed" type="MeshInstance3D"]
 mesh = ExtResource("1_y5sjs")
 surface_material_override/0 = ExtResource("2_e2628")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="CarArea3D" parent="." instance=ExtResource("4_f0o01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.388306, 1.56396, 0.478614)
 
 [node name="TrashThrowingMarker" parent="." instance=ExtResource("3_fyqt7")]

@@ -1,0 +1,75 @@
+[gd_scene load_steps=8 format=3 uid="uid://de8ckcxngk3j3"]
+
+[ext_resource type="PackedScene" uid="uid://vx8thkpwhynj" path="res://prefabs/street_environment.tscn" id="1_jhcwy"]
+[ext_resource type="Script" path="res://assets/scripts/CarSpawner.gd" id="2_kb42u"]
+[ext_resource type="PackedScene" uid="uid://cdf6p7dii0so4" path="res://prefabs/cars.tscn" id="3_ismvi"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xxwrv"]
+size = Vector3(8.61135, 5.32401, 2)
+
+[sub_resource type="Animation" id="Animation_wwmjo"]
+resource_name = "car_moving"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 43.7445)]
+}
+
+[sub_resource type="Animation" id="Animation_7od22"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 43.7445)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uedjw"]
+_data = {
+"RESET": SubResource("Animation_7od22"),
+"car_moving": SubResource("Animation_wwmjo")
+}
+
+[node name="kaiScene" type="Node3D"]
+
+[node name="street_environment" parent="." instance=ExtResource("1_jhcwy")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-3.74676e-08, -0.515053, 0.857158, -2.25137e-08, 0.857158, 0.515053, -1, 0, -4.37114e-08, 9.868, 3.446, 0)
+
+[node name="CarSpawner" type="Node3D" parent="."]
+script = ExtResource("2_kb42u")
+
+[node name="Area3D" type="Area3D" parent="CarSpawner"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CarSpawner/Area3D"]
+shape = SubResource("BoxShape3D_xxwrv")
+
+[node name="CarStartPosition" type="Marker3D" parent="CarSpawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20.2815)
+
+[node name="Cars" parent="CarSpawner/CarStartPosition" instance=ExtResource("3_ismvi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 43.7445)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CarSpawner/CarStartPosition/Cars"]
+autoplay = "car_moving"
+libraries = {
+"": SubResource("AnimationLibrary_uedjw")
+}
+
+[connection signal="area_entered" from="CarSpawner/Area3D" to="CarSpawner" method="_on_area_3d_area_entered"]
+[connection signal="animation_finished" from="CarSpawner/CarStartPosition/Cars/AnimationPlayer" to="CarSpawner" method="_on_animation_player_animation_finished"]
