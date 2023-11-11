@@ -13,7 +13,7 @@ func _ready():
 	trash.set_visible(true)
 
 func _input(event):
-	if event.is_action_pressed("swing"):
+	if event.is_action_pressed("swing") && !anim.is_playing():
 		hit()
 
 func hit():
