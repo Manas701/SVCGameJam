@@ -1,17 +1,14 @@
-extends CharacterBody3D
+extends MeshInstance3D
 
-var angular_speed = PI
-
-func _init():
-	print("hello")
-	
-#func _process(delta):
-	#_input()
-
+var swingDistance = 90
+var swingTime = 1.0
+var tween: Tween
 
 func _input(event):
-	if event is InputEventKey and event.pressed:
-		if event.keycode == KEY_SPACE:
-			print("space")
+	if event.is_action_pressed("swing"):
+		swing()
 
-
+func swing():
+#	tween = create_tween()
+#	tween.tween_property(self, "rotation_degrees", swingDistance, swingTime)
+	print("YOOOOOO")
