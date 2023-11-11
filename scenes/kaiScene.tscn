@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvxhlobky5o7c"]
+
+[ext_resource type="PackedScene" uid="uid://vx8thkpwhynj" path="res://prefabs/street_environment.tscn" id="1_jhcwy"]
+[ext_resource type="PackedScene" path="res://prefabs/car_spawner.tscn" id="2_us6wg"]
+
+[node name="kaiScene" type="Node3D"]
+
+[node name="street_environment" parent="." instance=ExtResource("1_jhcwy")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-3.74676e-08, -0.515053, 0.857158, -2.25137e-08, 0.857158, 0.515053, -1, 0, -4.37114e-08, 9.868, 3.446, 0)
+
+[node name="CarSpawner" parent="." instance=ExtResource("2_us6wg")]
+
+[editable path="CarSpawner"]

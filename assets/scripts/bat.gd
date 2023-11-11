@@ -1,8 +1,10 @@
-extends MeshInstance3D
+extends CharacterBody3D
 
 var swingTime = 0.2
+var returnTime = 0.3
+var waitTime = 0.15
 
-var swingDegrees = 120.0
+var swingDegrees = 130.0
 var ogRotation = get_rotation_degrees()
 var endRotation = Vector3(ogRotation.x, ogRotation.y+swingDegrees, ogRotation.z)
 
@@ -14,6 +16,7 @@ func _input(event):
 
 func swing():
 	tween = create_tween()
-	tween.tween_property(self, "rotation_degrees", endRotation, swingTime).set_trans(Tween.TRANS_SINE)
-	tween.tween_property(self, "rotation_degrees", ogRotation, swingTime).set_trans(Tween.TRANS_SINE)
-	print("YOOOOOO")
+	tween.tween_property(self, "rotation_degrees", endRotation, swingTime).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	tween.tween_interval(waitTime)
+	tween.tween_property(self, "rotation_degrees", ogRotation, returnTime).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	print("Bat Swung")

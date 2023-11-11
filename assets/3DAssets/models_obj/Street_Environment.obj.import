@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bb1nqe4l5nrw"
+path="res://.godot/imported/Street_Environment.obj-083d72cdc5ce0c4fa5fb4c1987a6c286.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Street_Environment.obj-083d72cdc5ce0c4fa5fb4c1987a6c286.mesh"]
+
+source_file="res://assets/3DAssets/models_obj/Street_Environment.obj"
+dest_files=["res://.godot/imported/Street_Environment.obj-083d72cdc5ce0c4fa5fb4c1987a6c286.mesh", "res://.godot/imported/Street_Environment.obj-083d72cdc5ce0c4fa5fb4c1987a6c286.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
