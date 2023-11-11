@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cbw6v1wro3qnj"
+path="res://.godot/imported/Trash_Paper.obj-af4fb2033c9f4bd376d41c58f2729d12.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Trash_Paper.obj-af4fb2033c9f4bd376d41c58f2729d12.mesh"]
+
+source_file="res://assets/3DAssets/models_obj/Trash_Paper.obj"
+dest_files=["res://.godot/imported/Trash_Paper.obj-af4fb2033c9f4bd376d41c58f2729d12.mesh", "res://.godot/imported/Trash_Paper.obj-af4fb2033c9f4bd376d41c58f2729d12.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://chvftwis3tmsv"
+path="res://.godot/imported/Bin_Compost.obj-388b30eadfa6138c455cf8a11932210c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Bin_Compost.obj-388b30eadfa6138c455cf8a11932210c.mesh"]
+
+source_file="res://assets/3DAssets/models_obj/Bin_Compost.obj"
+dest_files=["res://.godot/imported/Bin_Compost.obj-388b30eadfa6138c455cf8a11932210c.mesh", "res://.godot/imported/Bin_Compost.obj-388b30eadfa6138c455cf8a11932210c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

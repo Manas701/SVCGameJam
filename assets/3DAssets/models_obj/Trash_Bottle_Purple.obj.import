@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dedqlqrfaix5e"
+path="res://.godot/imported/Trash_Bottle_Purple.obj-c9769f27a2c0852fe167bbf07e3ebaec.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Trash_Bottle_Purple.obj-c9769f27a2c0852fe167bbf07e3ebaec.mesh"]
+
+source_file="res://assets/3DAssets/models_obj/Trash_Bottle_Purple.obj"
+dest_files=["res://.godot/imported/Trash_Bottle_Purple.obj-c9769f27a2c0852fe167bbf07e3ebaec.mesh", "res://.godot/imported/Trash_Bottle_Purple.obj-c9769f27a2c0852fe167bbf07e3ebaec.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

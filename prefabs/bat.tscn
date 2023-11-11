@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://hpv7wre553nk"]
+[gd_scene load_steps=4 format=3 uid="uid://hpv7wre553nk"]
 
 [ext_resource type="ArrayMesh" uid="uid://dcytc4257l6ai" path="res://assets/3DAssets/models_obj/Bat.obj" id="1_usse7"]
+[ext_resource type="Material" uid="uid://cfrmr730rvkhs" path="res://assets/3DAssets/models_obj/textures/textureMaterial.tres" id="2_o2s7y"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_djq2y"]
 size = Vector3(0.177438, 1.01405, 0.199464)
@@ -9,6 +10,7 @@ size = Vector3(0.177438, 1.01405, 0.199464)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_usse7")
+surface_material_override/0 = ExtResource("2_o2s7y")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.518001, 0)

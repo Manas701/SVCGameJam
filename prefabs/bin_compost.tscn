@@ -1,0 +1,10 @@
+[gd_scene load_steps=4 format=3 uid="uid://blrsu6t7na4pf"]
+
+[ext_resource type="ArrayMesh" uid="uid://chvftwis3tmsv" path="res://assets/3DAssets/models_obj/Bin_Compost.obj" id="1_j148m"]
+[ext_resource type="Material" uid="uid://cfrmr730rvkhs" path="res://assets/3DAssets/models_obj/textures/textureMaterial.tres" id="2_wrlfg"]
+[ext_resource type="Material" uid="uid://ce4srfgejq1mg" path="res://assets/3DAssets/models_obj/textures/compostBinSymbolMaterial.tres" id="3_sy154"]
+
+[node name="Bin_Compost" type="MeshInstance3D"]
+mesh = ExtResource("1_j148m")
+surface_material_override/0 = ExtResource("2_wrlfg")
+surface_material_override/1 = ExtResource("3_sy154")

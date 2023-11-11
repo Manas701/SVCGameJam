@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://4f1t6s65lrgj"
+path="res://.godot/imported/Bin_Trash.obj-315f0c34c3705a9f2ee79ea21a7cf01b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Bin_Trash.obj-315f0c34c3705a9f2ee79ea21a7cf01b.mesh"]
+
+source_file="res://assets/3DAssets/models_obj/Bin_Trash.obj"
+dest_files=["res://.godot/imported/Bin_Trash.obj-315f0c34c3705a9f2ee79ea21a7cf01b.mesh", "res://.godot/imported/Bin_Trash.obj-315f0c34c3705a9f2ee79ea21a7cf01b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
