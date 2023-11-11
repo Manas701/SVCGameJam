@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=3 uid="uid://cmk3w3urbdkri"]
 
 [ext_resource type="Script" path="res://assets/scripts/bat.gd" id="2_whjhi"]
-[ext_resource type="PackedScene" path="res://prefabs/bin_recycle.tscn" id="6_018ci"]
+[ext_resource type="PackedScene" uid="uid://e74xo05y6nei" path="res://prefabs/bin_recycle.tscn" id="6_018ci"]
 [ext_resource type="PackedScene" uid="uid://hpv7wre553nk" path="res://prefabs/bat.tscn" id="7_5fts6"]
-[ext_resource type="PackedScene" path="res://prefabs/bin_compost.tscn" id="7_ke1kv"]
-[ext_resource type="PackedScene" uid="uid://tx72n0re52ye" path="res://prefabs/trash.tscn" id="7_wwkud"]
-[ext_resource type="PackedScene" path="res://prefabs/bin_trash.tscn" id="8_nec8g"]
+[ext_resource type="PackedScene" uid="uid://blrsu6t7na4pf" path="res://prefabs/bin_compost.tscn" id="7_ke1kv"]
+[ext_resource type="PackedScene" path="res://prefabs/trash.tscn" id="7_wwkud"]
+[ext_resource type="PackedScene" uid="uid://dcj2ftby2qt52" path="res://prefabs/bin_trash.tscn" id="8_nec8g"]
 
 [sub_resource type="Animation" id="Animation_hn8jn"]
 length = 0.001
