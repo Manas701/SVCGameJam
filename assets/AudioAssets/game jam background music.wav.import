@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://jup27d2nmt2o"
-path="res://.godot/imported/game jam background music.wav-d513696c757f013503250364780d9515.sample"
+path="res://.godot/imported/game jam background music.wav-856c1e139bcef28f49710b8f89bc616e.sample"
 
 [deps]
 
-source_file="res://assets/sound_assets/game jam background music.wav"
-dest_files=["res://.godot/imported/game jam background music.wav-d513696c757f013503250364780d9515.sample"]
+source_file="res://assets/AudioAssets/game jam background music.wav"
+dest_files=["res://.godot/imported/game jam background music.wav-856c1e139bcef28f49710b8f89bc616e.sample"]
 
 [params]
 
