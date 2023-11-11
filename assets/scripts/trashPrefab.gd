@@ -5,9 +5,11 @@ var trash_type: Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	anim.connect("animation_finished", destroy_trash)
+	
 	randomize()
-	var children = get_children()
-	var trash = children[randi() % children.size()]
+	var trashOptions = get_tree().get_nodes_in_group("trashObjects")
+	var trash = trashOptions[randi() % trashOptions.size()]
 	trash.set_visible(true)
 
 func _input(event):
@@ -16,3 +18,6 @@ func _input(event):
 
 func hit():
 	anim.play("hit_center")
+
+func destroy_trash(_event):
+	queue_free()

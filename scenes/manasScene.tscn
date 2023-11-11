@@ -1,7 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://cmk3w3urbdkri"]
+[gd_scene load_steps=10 format=3 uid="uid://cmk3w3urbdkri"]
 
 [ext_resource type="Script" path="res://assets/scripts/bat.gd" id="2_whjhi"]
-[ext_resource type="ArrayMesh" uid="uid://4f1t6s65lrgj" path="res://assets/3DAssets/models_obj/Bin_Trash.obj" id="3_4r518"]
 [ext_resource type="PackedScene" path="res://prefabs/bin_recycle.tscn" id="6_018ci"]
 [ext_resource type="PackedScene" uid="uid://hpv7wre553nk" path="res://prefabs/bat.tscn" id="7_5fts6"]
 [ext_resource type="PackedScene" path="res://prefabs/bin_compost.tscn" id="7_ke1kv"]
@@ -30,10 +29,6 @@ _data = {
 [node name="manasScene" type="Node3D"]
 
 [node name="Camera3D" type="Camera3D" parent="."]
-
-[node name="BinTrash" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -5)
-mesh = ExtResource("3_4r518")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 
