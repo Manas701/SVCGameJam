@@ -1,16 +1,30 @@
-[gd_scene format=3 uid="uid://dmsyawi4g6mgw"]
+[gd_scene load_steps=2 format=3 uid="uid://dmsyawi4g6mgw"]
+
+[ext_resource type="Script" path="res://assets/scripts/startButton.gd" id="1_jfpvg"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="."]
+[node name="Title" type="Label" parent="."]
 layout_mode = 0
-offset_left = 897.0
-offset_top = 560.0
-offset_right = 1138.0
-offset_bottom = 641.0
-text = "Start"
+offset_left = 622.0
+offset_top = 161.0
+offset_right = 708.0
+offset_bottom = 187.0
+text = "Trash Hero"
+
+[node name="startButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 546.0
+offset_top = 413.0
+offset_right = 787.0
+offset_bottom = 494.0
+text = "Play Game"
+script = ExtResource("1_jfpvg")
+
+[connection signal="pressed" from="startButton" to="startButton" method="_on_pressed"]
