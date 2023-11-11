@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://cmk3w3urbdkri"]
+[gd_scene load_steps=10 format=3 uid="uid://cmk3w3urbdkri"]
 
+[ext_resource type="Script" path="res://assets/scripts/trash.gd" id="2_tnpwx"]
 [ext_resource type="Script" path="res://assets/scripts/bat.gd" id="2_whjhi"]
 [ext_resource type="PackedScene" path="res://prefabs/bin_recycle.tscn" id="6_018ci"]
 [ext_resource type="PackedScene" uid="uid://hpv7wre553nk" path="res://prefabs/bat.tscn" id="7_5fts6"]
@@ -17,12 +18,18 @@
 
 [node name="Bin_Recycle" parent="." instance=ExtResource("6_018ci")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+script = ExtResource("2_tnpwx")
+trash_type = "Recycling"
 
 [node name="Bin_Compost" parent="." instance=ExtResource("7_ke1kv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -5)
+script = ExtResource("2_tnpwx")
+trash_type = "Compost"
 
 [node name="Bin_Trash" parent="." instance=ExtResource("8_nec8g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -5)
+script = ExtResource("2_tnpwx")
+trash_type = "Trash"
 
 [node name="Bat" parent="." instance=ExtResource("7_5fts6")]
 transform = Transform3D(0.315285, 0.948997, 0, -0.948997, 0.315285, 0, 0, 0, 1, -0.405409, 0, -1.01362)
