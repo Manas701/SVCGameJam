@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://odokg22h8g5o"
-path="res://.godot/imported/GLASS.wav-2e9447060fbc3e9d768a337d356b1948.sample"
+uid="uid://buog3xyu85ib0"
+path="res://.godot/imported/BAT HIT.wav-69cdf59b91433dfa2e858333c093bd63.sample"
 
 [deps]
 
-source_file="res://assets/sound_assets/GLASS.wav"
-dest_files=["res://.godot/imported/GLASS.wav-2e9447060fbc3e9d768a337d356b1948.sample"]
+source_file="res://assets/AudioAssets/BAT HIT.wav"
+dest_files=["res://.godot/imported/BAT HIT.wav-69cdf59b91433dfa2e858333c093bd63.sample"]
 
 [params]
 

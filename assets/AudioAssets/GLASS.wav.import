@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://cfjkbpaviq8vi"
-path="res://.godot/imported/PAPER.wav-d0d0d806bdfc83a8b85f2db390e0f316.sample"
+uid="uid://odokg22h8g5o"
+path="res://.godot/imported/GLASS.wav-98f294dd7c884d1682d73d59d9c0b9c6.sample"
 
 [deps]
 
-source_file="res://assets/sound_assets/PAPER.wav"
-dest_files=["res://.godot/imported/PAPER.wav-d0d0d806bdfc83a8b85f2db390e0f316.sample"]
+source_file="res://assets/AudioAssets/GLASS.wav"
+dest_files=["res://.godot/imported/GLASS.wav-98f294dd7c884d1682d73d59d9c0b9c6.sample"]
 
 [params]
 

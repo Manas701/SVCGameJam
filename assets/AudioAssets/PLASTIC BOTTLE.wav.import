@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dryya5na1d7fn"
-path="res://.godot/imported/PLASTIC BOTTLE.wav-94dd827caf257632107009ac2c61c59c.sample"
+path="res://.godot/imported/PLASTIC BOTTLE.wav-fb9fed2b6456adbb640e5ec70c863596.sample"
 
 [deps]
 
-source_file="res://assets/sound_assets/PLASTIC BOTTLE.wav"
-dest_files=["res://.godot/imported/PLASTIC BOTTLE.wav-94dd827caf257632107009ac2c61c59c.sample"]
+source_file="res://assets/AudioAssets/PLASTIC BOTTLE.wav"
+dest_files=["res://.godot/imported/PLASTIC BOTTLE.wav-fb9fed2b6456adbb640e5ec70c863596.sample"]
 
 [params]
 
