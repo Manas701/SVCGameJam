@@ -16,15 +16,15 @@ sky = SubResource("Sky_fn5y6")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_jd2x6")
+
+[node name="Camera3D" type="Camera3D" parent="WorldEnvironment"]
+
 [node name="TrashBottleGreen" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.16501, 0, -1.5346)
 mesh = ExtResource("4_3tju8")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="CanvasLayer"]
-environment = SubResource("Environment_jd2x6")
-
-[node name="Camera3D" type="Camera3D" parent="CanvasLayer/WorldEnvironment"]
 
 [node name="Control" parent="CanvasLayer" instance=ExtResource("2_h07u2")]

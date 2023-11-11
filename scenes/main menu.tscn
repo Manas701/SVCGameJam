@@ -2,17 +2,15 @@
 
 [node name="Control" type="Control"]
 layout_mode = 3
-anchor_right = 1.111
-anchor_bottom = 1.111
-offset_right = 0.12793
-offset_bottom = 0.0719604
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 452.0
-offset_top = 286.0
-offset_right = 693.0
-offset_bottom = 367.0
+offset_left = 897.0
+offset_top = 560.0
+offset_right = 1138.0
+offset_bottom = 641.0
 text = "Start"
