@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ce4srfgejq1mg"]
+
+[ext_resource type="Texture2D" uid="uid://cxud3h51j3kr7" path="res://assets/3DAssets/models_obj/textures/compost_icon.jpg" id="1_ygfnp"]
+
+[resource]
+shading_mode = 0
+albedo_texture = ExtResource("1_ygfnp")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cb1djbt1qeyn8"]
 
 [ext_resource type="ArrayMesh" uid="uid://bt7ov6xpi3rxg" path="res://assets/3DAssets/models_obj/CarGrey.obj" id="1_158l7"]
-[ext_resource type="Material" uid="uid://cfrmr730rvkhs" path="res://models_obj/textures/textureMaterial.tres" id="2_santv"]
+[ext_resource type="Material" uid="uid://cfrmr730rvkhs" path="res://assets/3DAssets/models_obj/textures/textureMaterial.tres" id="2_santv"]
 
 [node name="CarGrey" type="MeshInstance3D"]
 mesh = ExtResource("1_158l7")
