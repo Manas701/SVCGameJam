@@ -1,3 +1,54 @@
-[gd_scene format=3 uid="uid://cmk3w3urbdkri"]
+[gd_scene load_steps=10 format=3 uid="uid://cmk3w3urbdkri"]
+
+[ext_resource type="Script" path="res://assets/scripts/bat.gd" id="2_whjhi"]
+[ext_resource type="PackedScene" path="res://prefabs/bin_recycle.tscn" id="6_018ci"]
+[ext_resource type="PackedScene" uid="uid://hpv7wre553nk" path="res://prefabs/bat.tscn" id="7_5fts6"]
+[ext_resource type="PackedScene" path="res://prefabs/bin_compost.tscn" id="7_ke1kv"]
+[ext_resource type="PackedScene" uid="uid://tx72n0re52ye" path="res://prefabs/trash.tscn" id="7_wwkud"]
+[ext_resource type="PackedScene" path="res://prefabs/bin_trash.tscn" id="8_nec8g"]
+
+[sub_resource type="Animation" id="Animation_hn8jn"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_ch5xh"]
+resource_name = "new_animation"
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0.25, -1.5, 0.5, 1, 0, 1.8, -3.5, 1, 1, 0, 0.9, -5)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qpaf1"]
+_data = {
+"RESET": SubResource("Animation_hn8jn"),
+"hit_center": SubResource("Animation_ch5xh")
+}
 
 [node name="manasScene" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+
+[node name="Bin_Recycle" parent="." instance=ExtResource("6_018ci")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+
+[node name="Bin_Compost" parent="." instance=ExtResource("7_ke1kv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -5)
+
+[node name="Bin_Trash" parent="." instance=ExtResource("8_nec8g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -5)
+
+[node name="Bat" parent="." instance=ExtResource("7_5fts6")]
+transform = Transform3D(0.315285, 0.948997, 0, -0.948997, 0.315285, 0, 0, 0, 1, -0.405409, 0, -1.01362)
+script = ExtResource("2_whjhi")
+
+[node name="trash" parent="." instance=ExtResource("7_wwkud")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, -1.5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="trash"]
+libraries = {
+"": SubResource("AnimationLibrary_qpaf1")
+}

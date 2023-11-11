@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://bietf7gxwakf0"
-path="res://.godot/imported/WHOOSH.wav-a48dbb35334ea90dfe4ea25866e668f7.sample"
+uid="uid://0qwqdc1ig4pu"
+path="res://.godot/imported/TRASH.wav-b6e4cfe4eb6bf383aced2ac0b682c65e.sample"
 
 [deps]
 
-source_file="res://assets/sound_assets/WHOOSH.wav"
-dest_files=["res://.godot/imported/WHOOSH.wav-a48dbb35334ea90dfe4ea25866e668f7.sample"]
+source_file="res://assets/AudioAssets/TRASH.wav"
+dest_files=["res://.godot/imported/TRASH.wav-b6e4cfe4eb6bf383aced2ac0b682c65e.sample"]
 
 [params]
 
