@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://2nr0ivei6ffh"]
+
+[ext_resource type="Texture2D" uid="uid://0cm0hwmo0lgy" path="res://assets/3DAssets/models_obj/textures/recycle_symbol.png" id="1_as6pa"]
+
+[resource]
+shading_mode = 0
+albedo_texture = ExtResource("1_as6pa")

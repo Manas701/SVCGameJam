@@ -1,0 +1,10 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcj2ftby2qt52"]
+
+[ext_resource type="ArrayMesh" uid="uid://4f1t6s65lrgj" path="res://assets/3DAssets/models_obj/Bin_Trash.obj" id="1_w6e4a"]
+[ext_resource type="Material" uid="uid://cfrmr730rvkhs" path="res://assets/3DAssets/models_obj/textures/textureMaterial.tres" id="2_8gffq"]
+[ext_resource type="Material" uid="uid://cqihp8d31116r" path="res://assets/3DAssets/models_obj/textures/trashBinSymbolMaterial.tres" id="3_l0v22"]
+
+[node name="Bin_Trash" type="MeshInstance3D"]
+mesh = ExtResource("1_w6e4a")
+surface_material_override/0 = ExtResource("2_8gffq")
+surface_material_override/1 = ExtResource("3_l0v22")

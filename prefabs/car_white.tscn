@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://w3hr3fd1r8wl"]
 
-[ext_resource type="ArrayMesh" uid="uid://bl75dqgvnvmti" path="res://models_obj/CarWhite.obj" id="1_f4rie"]
-[ext_resource type="Material" uid="uid://cfrmr730rvkhs" path="res://models_obj/textures/textureMaterial.tres" id="2_rc4id"]
+[ext_resource type="ArrayMesh" uid="uid://bl75dqgvnvmti" path="res://assets/3DAssets/models_obj/CarWhite.obj" id="1_f4rie"]
+[ext_resource type="Material" uid="uid://cfrmr730rvkhs" path="res://assets/3DAssets/models_obj/textures/textureMaterial.tres" id="2_pic0f"]
 
 [node name="CarWhite" type="MeshInstance3D"]
 mesh = ExtResource("1_f4rie")
-surface_material_override/0 = ExtResource("2_rc4id")
+surface_material_override/0 = ExtResource("2_pic0f")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
