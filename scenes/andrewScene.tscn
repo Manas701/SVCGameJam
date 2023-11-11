@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dn0f5hple32ht"]
+[gd_scene load_steps=5 format=3 uid="uid://dn0f5hple32ht"]
 
 [ext_resource type="ArrayMesh" uid="uid://dcytc4257l6ai" path="res://assets/3DAssets/models_obj/Bat.obj" id="1_icco2"]
 [ext_resource type="Script" path="res://assets/scripts/bat.gd" id="2_351hp"]
+[ext_resource type="PackedScene" uid="uid://c8ydrldfutkh1" path="res://prefabs/trash_bottle_green.tscn" id="3_l8r4s"]
+[ext_resource type="PackedScene" uid="uid://dcj2ftby2qt52" path="res://prefabs/bin_trash.tscn" id="4_ygdgl"]
 
 [node name="andrewScene" type="Node3D"]
 
@@ -9,3 +11,9 @@
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.520718, 0, -0.335664)
 mesh = ExtResource("1_icco2")
 script = ExtResource("2_351hp")
+
+[node name="Trash_bottle_green" parent="." instance=ExtResource("3_l8r4s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.47462, 0, -7.47421)
+
+[node name="Bin_Trash" parent="." instance=ExtResource("4_ygdgl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.08001, 0, -5.55112)
