@@ -1,10 +1,17 @@
 extends CharacterBody3D
 
-var speed = 100
 var angular_speed = PI
 
-func _move(delta):
+func _init():
+	print("hello")
 	
-	position = angular_speed * delta
+#func _process(delta):
+	#_input()
+
+
+func _input(event):
+	if event is InputEventKey and event.pressed:
+		if event.keycode == KEY_SPACE:
+			print("space")
 
 
