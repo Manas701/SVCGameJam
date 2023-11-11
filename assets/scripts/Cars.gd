@@ -46,9 +46,11 @@ func new_car():
 	else:
 		car_white.set_visible(true)
 		car_white_coll.set_deferred("enabled", true)
+	
 
 func disable_cars():
 	car_black.set_visible(false)
+	car_black.set_deferred("disabled", true)
 	car_black.set_deferred("disabled", true)
 	car_white.set_visible(false)
 	car_white_coll.set_deferred("disabled", true)

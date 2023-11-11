@@ -11,16 +11,11 @@
 script = ExtResource("1_b12b4")
 
 [node name="CarBlack" parent="." instance=ExtResource("1_2twad")]
-visible = false
 
 [node name="CarBlue" parent="." groups=["car"] instance=ExtResource("2_je3a6")]
-visible = false
 
 [node name="CarGrey" parent="." groups=["car"] instance=ExtResource("3_q43b1")]
-visible = false
 
 [node name="CarRed" parent="." groups=["car"] instance=ExtResource("4_0dddp")]
-visible = false
 
 [node name="CarWhite" parent="." groups=["car"] instance=ExtResource("5_x7ddl")]
-visible = false
