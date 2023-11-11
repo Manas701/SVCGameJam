@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://devrjoeo8evb6"]
+
+[ext_resource type="ArrayMesh" uid="uid://clhw8ctlqa30d" path="res://assets/3DAssets/models_obj/Trash_Bottle_Plastic.obj" id="1_rdsx1"]
+[ext_resource type="Material" uid="uid://cfrmr730rvkhs" path="res://assets/3DAssets/models_obj/textures/textureMaterial.tres" id="2_e7fw2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pxc4j"]
+size = Vector3(0.183638, 0.315718, 0.185105)
+
+[node name="Trash_Bottle_Plastic" type="CharacterBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_rdsx1")
+surface_material_override/0 = ExtResource("2_e7fw2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_pxc4j")
