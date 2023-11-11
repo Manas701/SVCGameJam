@@ -3,5 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://b4i628tsuropf" path="res://assets/3DAssets/models_obj/textures/texture.png" id="1_vwvwy"]
 
 [resource]
+cull_mode = 2
 shading_mode = 0
 albedo_texture = ExtResource("1_vwvwy")
