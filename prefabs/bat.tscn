@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://hpv7wre553nk"]
+[gd_scene load_steps=5 format=3 uid="uid://hpv7wre553nk"]
 
 [ext_resource type="ArrayMesh" uid="uid://dcytc4257l6ai" path="res://assets/3DAssets/models_obj/Bat.obj" id="1_usse7"]
 [ext_resource type="Material" uid="uid://cfrmr730rvkhs" path="res://assets/3DAssets/models_obj/textures/textureMaterial.tres" id="2_o2s7y"]
+[ext_resource type="AudioStream" uid="uid://buog3xyu85ib0" path="res://assets/AudioAssets/BAT HIT.wav" id="3_6nao4"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_djq2y"]
 size = Vector3(0.177438, 1.01405, 0.199464)
@@ -15,3 +16,6 @@ surface_material_override/0 = ExtResource("2_o2s7y")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.518001, 0)
 shape = SubResource("BoxShape3D_djq2y")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_6nao4")

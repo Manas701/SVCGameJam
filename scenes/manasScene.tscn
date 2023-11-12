@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cmk3w3urbdkri"]
+[gd_scene load_steps=21 format=3 uid="uid://cmk3w3urbdkri"]
 
 [ext_resource type="Script" path="res://assets/scripts/trash.gd" id="2_tnpwx"]
 [ext_resource type="Script" path="res://assets/scripts/bat.gd" id="2_whjhi"]
@@ -15,6 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://xv0tk6gk4pe7" path="res://prefabs/ui_arrow.tscn" id="13_lmqbc"]
 [ext_resource type="PackedScene" uid="uid://dj0rduhi3ivhi" path="res://prefabs/trash_spawner.tscn" id="14_6iui7"]
 [ext_resource type="Script" path="res://assets/scripts/Scorer.gd" id="15_x33cw"]
+[ext_resource type="FontFile" uid="uid://brlxgerq8nwag" path="res://assets/fonts/Chewy-Regular.ttf" id="16_60uhs"]
+[ext_resource type="Script" path="res://assets/scripts/score_label.gd" id="16_kdtlo"]
 
 [sub_resource type="Animation" id="Animation_5ov5y"]
 resource_name = "hover"
@@ -31,6 +33,10 @@ tracks/0/keys = PackedFloat32Array(0, 1, 0, 0.5, -5, 0.5, 1, 0, 1, -5, 1, 1, 0, 
 _data = {
 "hover": SubResource("Animation_5ov5y")
 }
+
+[sub_resource type="Theme" id="Theme_axrff"]
+default_font = ExtResource("16_60uhs")
+default_font_size = 32
 
 [node name="manasScene" type="Node3D"]
 
@@ -91,6 +97,15 @@ surface_material_override/1 = ExtResource("13_crcg0")
 
 [node name="Scorer" type="Node3D" parent="."]
 script = ExtResource("15_x33cw")
+
+[node name="score_label" type="RichTextLabel" parent="."]
+offset_right = 128.0
+offset_bottom = 121.0
+theme = SubResource("Theme_axrff")
+bbcode_enabled = true
+text = "[center]0[/center]"
+fit_content = true
+script = ExtResource("16_kdtlo")
 
 [editable path="trash/AnimationPlayer"]
 [editable path="Trash_Spawner"]

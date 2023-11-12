@@ -2,8 +2,8 @@ extends Node3D
 
 var bpm = 120
 
-var song_position = 0.0
-var song_position_in_beats = 0
+var song_position: = 0.0
+var song_position_in_beats: = 0
 var last_spawned_beat = 0
 var sec_per_beat = 60.0 / bpm
 
@@ -19,7 +19,7 @@ func _ready():
 	$Conductor.play_with_beat_offset(0)
 
 
-func _on_Conductor_measure(position):
+func _on_conductor_measure_signal(position):
 	if position == 1:
 		_spawn_trash(spawn_1_beat)
 	elif position == 2:
@@ -30,7 +30,7 @@ func _on_Conductor_measure(position):
 		_spawn_trash(spawn_4_beat)
 
 
-func _on_Conductor_beat(_position):
+func _on_conductor_beat(position):
 	song_position_in_beats = position
 	if (song_position_in_beats >= 0 && song_position_in_beats < 16):
 		spawn_1_beat = 0

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dj0rduhi3ivhi"]
+[gd_scene load_steps=5 format=3 uid="uid://dj0rduhi3ivhi"]
 
 [ext_resource type="Script" path="res://assets/scripts/trash_spawner.gd" id="1_v5hur"]
 [ext_resource type="PackedScene" uid="uid://ctsx2kcfbb3l2" path="res://scenes/conductor.tscn" id="2_bpt2x"]
 [ext_resource type="AudioStream" uid="uid://jup27d2nmt2o" path="res://assets/AudioAssets/game jam background music.wav" id="3_l7ba3"]
+[ext_resource type="AudioStream" uid="uid://bietf7gxwakf0" path="res://assets/AudioAssets/WHOOSH.wav" id="4_q2xwn"]
 
 [node name="Trash_Spawner" type="Node3D"]
 script = ExtResource("1_v5hur")
@@ -10,6 +11,9 @@ script = ExtResource("1_v5hur")
 [node name="Conductor" parent="." instance=ExtResource("2_bpt2x")]
 stream = ExtResource("3_l7ba3")
 autoplay = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_q2xwn")
 
 [connection signal="beat" from="Conductor" to="." method="_on_conductor_beat"]
 [connection signal="measure_signal" from="Conductor" to="." method="_on_conductor_measure_signal"]
