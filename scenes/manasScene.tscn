@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cmk3w3urbdkri"]
+[gd_scene load_steps=23 format=3 uid="uid://cmk3w3urbdkri"]
 
 [ext_resource type="Script" path="res://assets/scripts/trash.gd" id="2_tnpwx"]
 [ext_resource type="Script" path="res://assets/scripts/bat.gd" id="2_whjhi"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://hpv7wre553nk" path="res://prefabs/bat.tscn" id="7_5fts6"]
 [ext_resource type="PackedScene" path="res://prefabs/bin_compost.tscn" id="7_ke1kv"]
 [ext_resource type="Script" path="res://assets/scripts/ChangingBins.gd" id="7_kxg3g"]
-[ext_resource type="PackedScene" uid="uid://tx72n0re52ye" path="res://prefabs/trash.tscn" id="7_wwkud"]
 [ext_resource type="PackedScene" path="res://prefabs/bin_trash.tscn" id="8_nec8g"]
 [ext_resource type="PackedScene" uid="uid://ci0dyooqj357r" path="res://prefabs/car_spawner.tscn" id="10_gh5mt"]
 [ext_resource type="PackedScene" path="res://prefabs/street_environment.tscn" id="11_0d368"]
@@ -55,7 +54,6 @@ _data = {
 transform = Transform3D(1, 0, 0, 0, 0.97381, 0.227365, 0, -0.227365, 0.97381, 0, 1.44543, 1.33061)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
-visible = false
 
 [node name="Bin_Recycle" parent="." instance=ExtResource("6_018ci")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
@@ -77,18 +75,10 @@ transform = Transform3D(0.315285, 0.948997, 0, -0.948997, 0.315285, 0, 0, 0, 1, 
 script = ExtResource("2_whjhi")
 
 [node name="CollisionBox" type="Area3D" parent="Bat"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0.5, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bat/CollisionBox"]
 shape = SubResource("SphereShape3D_ksrqy")
-
-[node name="trash" parent="." instance=ExtResource("7_wwkud")]
-process_mode = 4
-transform = Transform3D(1, 0, 0, 0, 0.664816, 0.747007, 0, -0.747007, 0.664816, 0, -0.993949, 0.991364)
-visible = false
-
-[node name="Trash_Apple" parent="trash" index="0"]
-visible = true
 
 [node name="PlayerInput" type="Node" parent="."]
 script = ExtResource("7_kxg3g")
@@ -149,6 +139,7 @@ font_size = 100
 outline_size = 0
 script = ExtResource("19_oa6cd")
 
-[editable path="trash"]
-[editable path="trash/AnimationPlayer"]
+[connection signal="body_entered" from="Bat/CollisionBox" to="Bat" method="_on_body_entered"]
+[connection signal="body_exited" from="Bat/CollisionBox" to="Bat" method="_on_body_exited"]
+
 [editable path="Trash_Spawner"]
