@@ -2,13 +2,13 @@
 
 [ext_resource type="Script" path="res://assets/scripts/trash.gd" id="2_tnpwx"]
 [ext_resource type="Script" path="res://assets/scripts/bat.gd" id="2_whjhi"]
-[ext_resource type="PackedScene" path="res://prefabs/bin_recycle.tscn" id="6_018ci"]
+[ext_resource type="PackedScene" uid="uid://e74xo05y6nei" path="res://prefabs/bin_recycle.tscn" id="6_018ci"]
 [ext_resource type="PackedScene" uid="uid://hpv7wre553nk" path="res://prefabs/bat.tscn" id="7_5fts6"]
 [ext_resource type="PackedScene" uid="uid://dpvfjowh2mn4x" path="res://prefabs/animation_player.tscn" id="7_gctov"]
-[ext_resource type="PackedScene" path="res://prefabs/bin_compost.tscn" id="7_ke1kv"]
-[ext_resource type="Script" path="res://scenes/ChangingBins.gd" id="7_kxg3g"]
+[ext_resource type="PackedScene" uid="uid://blrsu6t7na4pf" path="res://prefabs/bin_compost.tscn" id="7_ke1kv"]
 [ext_resource type="PackedScene" uid="uid://tx72n0re52ye" path="res://prefabs/trash.tscn" id="7_wwkud"]
-[ext_resource type="PackedScene" path="res://prefabs/bin_trash.tscn" id="8_nec8g"]
+[ext_resource type="PackedScene" uid="uid://dcj2ftby2qt52" path="res://prefabs/bin_trash.tscn" id="8_nec8g"]
+[ext_resource type="Script" path="res://assets/scripts/ChangingBins.gd" id="9_8ctjd"]
 
 [node name="manasScene" type="Node3D"]
 
@@ -41,6 +41,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, -1.5)
 [node name="AnimationPlayer" parent="trash" instance=ExtResource("7_gctov")]
 
 [node name="PlayerInput" type="Node" parent="."]
-script = ExtResource("7_kxg3g")
+script = ExtResource("9_8ctjd")
 whichBin = "1"
 metadata/animName = ""
