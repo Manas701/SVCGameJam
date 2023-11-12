@@ -1,16 +1,18 @@
-[gd_scene load_steps=22 format=3 uid="uid://cmk3w3urbdkri"]
+[gd_scene load_steps=24 format=3 uid="uid://cmk3w3urbdkri"]
 
+[ext_resource type="Script" path="res://scenes/manasScene.gd" id="1_4r1ej"]
 [ext_resource type="Script" path="res://assets/scripts/trash.gd" id="2_tnpwx"]
 [ext_resource type="Script" path="res://assets/scripts/bat.gd" id="2_whjhi"]
-[ext_resource type="PackedScene" path="res://prefabs/bin_recycle.tscn" id="6_018ci"]
+[ext_resource type="PackedScene" uid="uid://e74xo05y6nei" path="res://prefabs/bin_recycle.tscn" id="6_018ci"]
 [ext_resource type="PackedScene" uid="uid://hpv7wre553nk" path="res://prefabs/bat.tscn" id="7_5fts6"]
-[ext_resource type="PackedScene" path="res://prefabs/bin_compost.tscn" id="7_ke1kv"]
+[ext_resource type="PackedScene" uid="uid://blrsu6t7na4pf" path="res://prefabs/bin_compost.tscn" id="7_ke1kv"]
 [ext_resource type="Script" path="res://assets/scripts/ChangingBins.gd" id="7_kxg3g"]
-[ext_resource type="PackedScene" path="res://prefabs/bin_trash.tscn" id="8_nec8g"]
+[ext_resource type="AudioStream" uid="uid://buog3xyu85ib0" path="res://assets/AudioAssets/BAT HIT.wav" id="7_vgva4"]
+[ext_resource type="PackedScene" uid="uid://dcj2ftby2qt52" path="res://prefabs/bin_trash.tscn" id="8_nec8g"]
 [ext_resource type="PackedScene" uid="uid://ci0dyooqj357r" path="res://prefabs/car_spawner.tscn" id="10_gh5mt"]
-[ext_resource type="PackedScene" path="res://prefabs/street_environment.tscn" id="11_0d368"]
+[ext_resource type="PackedScene" uid="uid://vx8thkpwhynj" path="res://prefabs/street_environment.tscn" id="11_0d368"]
 [ext_resource type="Material" uid="uid://cfrmr730rvkhs" path="res://assets/3DAssets/models_obj/textures/textureMaterial.tres" id="13_crcg0"]
-[ext_resource type="PackedScene" uid="uid://xv0tk6gk4pe7" path="res://prefabs/ui_arrow.tscn" id="13_lmqbc"]
+[ext_resource type="PackedScene" path="res://prefabs/ui_arrow.tscn" id="13_lmqbc"]
 [ext_resource type="PackedScene" path="res://prefabs/trash_spawner.tscn" id="14_6iui7"]
 [ext_resource type="Script" path="res://assets/scripts/Scorer.gd" id="15_x33cw"]
 [ext_resource type="FontFile" uid="uid://brlxgerq8nwag" path="res://assets/fonts/Chewy-Regular.ttf" id="16_60uhs"]
@@ -49,7 +51,7 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.4, 0.5),
-"transitions": PackedFloat32Array(0.466516, 1, 0.482968, 1),
+"transitions": PackedFloat32Array(0.170755, 1, 0.148651, 1),
 "update": 0,
 "values": [Vector3(0, -1, -6.73659), Vector3(0, 3, -6.737), Vector3(0, 3, -6.737), Vector3(0, -1, -6.737)]
 }
@@ -60,6 +62,7 @@ _data = {
 }
 
 [node name="manasScene" type="Node3D"]
+script = ExtResource("1_4r1ej")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.97381, 0.227365, 0, -0.227365, 0.97381, 0, 1.44543, 1.33061)
@@ -84,6 +87,9 @@ trash_type = "Trash"
 [node name="Bat" parent="." instance=ExtResource("7_5fts6")]
 transform = Transform3D(0.315285, 0.948997, 0, -0.948997, 0.315285, 0, 0, 0, 1, -0.405409, 0, -1.01362)
 script = ExtResource("2_whjhi")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Bat"]
+stream = ExtResource("7_vgva4")
 
 [node name="CollisionBox" type="Area3D" parent="Bat"]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0.5, 0)
@@ -130,7 +136,7 @@ fit_content = true
 script = ExtResource("16_kdtlo")
 
 [node name="MissText" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -6.73659)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -6.737)
 modulate = Color(0.941176, 0.223529, 0.219608, 1)
 text = "Miss!"
 font = ExtResource("16_60uhs")
@@ -157,5 +163,6 @@ libraries = {
 
 [connection signal="body_entered" from="Bat/CollisionBox" to="Bat" method="_on_body_entered"]
 [connection signal="body_exited" from="Bat/CollisionBox" to="Bat" method="_on_body_exited"]
+[connection signal="finished" from="Trash_Spawner/Conductor" to="." method="_on_conductor_finished"]
 
 [editable path="Trash_Spawner"]

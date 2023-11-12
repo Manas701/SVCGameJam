@@ -5,7 +5,6 @@ extends Node
 var trash_type: Node
 var chosenTrash: CharacterBody3D
 var wasBatted = false
-var selectedBin: Node3D
 
 @export var hittable: bool = false
 
@@ -16,7 +15,9 @@ func _ready():
 	#randomize()
 	var trashOptions = get_tree().get_nodes_in_group("trashObjects")
 	chosenTrash = trashOptions[randi() % trashOptions.size()]
+	print("before set visible: " + str(chosenTrash.is_visible_in_tree()) + str(chosenTrash))
 	chosenTrash.visible = true
+	print("after set visible: " + str(chosenTrash.is_visible_in_tree()))
 
 func _input(event):
 	if event.is_action_pressed("swing") && (anim.get_current_animation()=="throw_trash") && hittable:
@@ -24,12 +25,11 @@ func _input(event):
 
 func hit():
 	wasBatted = true
-	selectedBin = get_parent().get_parent().get_node(get_parent().get_parent().get_node("PlayerInput").whichBin)
 	anim.play(get_parent().get_parent().get_node("PlayerInput").whichAnim)
 
 func on_trash_landed(_event):
 	if (wasBatted):
-		if (chosenTrash.trash_type == selectedBin.trash_type):
+		if (chosenTrash.trash_type == get_parent().get_parent().get_node(get_parent().get_parent().get_node("PlayerInput").whichBin).trash_type):
 			get_parent().get_parent().get_node("HitText/AnimationPlayer").play("popup")
 			print("Right Bin! :)")
 			Scorer.score += 1

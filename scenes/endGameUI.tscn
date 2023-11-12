@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://csmhoeo7vg0tr"]
+[gd_scene load_steps=6 format=3 uid="uid://c62qejis385xw"]
 
 [ext_resource type="Texture2D" uid="uid://br3nct5rewwt0" path="res://assets/2DAssets/endgame.png" id="1_rc44r"]
 [ext_resource type="FontFile" uid="uid://brlxgerq8nwag" path="res://assets/fonts/Chewy-Regular.ttf" id="2_jgoi1"]
 [ext_resource type="Script" path="res://assets/scripts/backButton.gd" id="3_72suu"]
+[ext_resource type="Script" path="res://scenes/RichTextLabel2.gd" id="3_nsnjm"]
 [ext_resource type="Script" path="res://assets/scripts/startButton.gd" id="3_xaf4k"]
 
 [node name="endGame" type="Control"]
@@ -28,7 +29,18 @@ theme_override_font_sizes/normal_font_size = 220
 bbcode_enabled = true
 text = "[wave] [rainbow freq=1 sat=0.5]GAME CLEAR!"
 
+[node name="RichTextLabel2" type="RichTextLabel" parent="Endgame"]
+offset_left = 37.0
+offset_top = -81.0
+offset_right = 486.0
+offset_bottom = 155.0
+theme_override_fonts/normal_font = ExtResource("2_jgoi1")
+theme_override_font_sizes/normal_font_size = 150
+bbcode_enabled = true
+script = ExtResource("3_nsnjm")
+
 [node name="backButton" type="Button" parent="."]
+layout_mode = 0
 offset_left = 792.0
 offset_top = 640.0
 offset_right = 974.0
@@ -41,6 +53,7 @@ script = ExtResource("3_72suu")
 
 [node name="startButton" type="Button" parent="."]
 modulate = Color(0.435294, 0.882353, 0.321569, 1)
+layout_mode = 0
 offset_left = 232.0
 offset_top = 640.0
 offset_right = 414.0

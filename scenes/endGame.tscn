@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bhkn7l2aus61e"]
+[gd_scene load_steps=6 format=3 uid="uid://dyd5es71kvc23"]
 
-[ext_resource type="PackedScene" uid="uid://csmhoeo7vg0tr" path="res://scenes/endGameUI.tscn" id="1_5t3pl"]
-[ext_resource type="PackedScene" uid="uid://d2hb0qqj1wx6s" path="res://prefabs/world_environment.tscn" id="2_g2wi6"]
+[ext_resource type="PackedScene" uid="uid://c62qejis385xw" path="res://scenes/endGameUI.tscn" id="1_5t3pl"]
+[ext_resource type="PackedScene" path="res://prefabs/world_environment.tscn" id="2_g2wi6"]
 [ext_resource type="PackedScene" uid="uid://vx8thkpwhynj" path="res://prefabs/street_environment.tscn" id="3_76ey8"]
 [ext_resource type="Material" uid="uid://cfrmr730rvkhs" path="res://assets/3DAssets/models_obj/textures/textureMaterial.tres" id="4_h1vt5"]
 [ext_resource type="AudioStream" uid="uid://2u5mk0ke3p0e" path="res://assets/AudioAssets/title_screen_theme.ogg" id="4_jnyxn"]

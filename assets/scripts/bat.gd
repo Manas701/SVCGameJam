@@ -13,6 +13,8 @@ var tween: Tween
 func _input(event):
 	if (event.is_action_pressed("swing") && (get_rotation_degrees() == ogRotation)):
 		swing()
+		$AudioStreamPlayer2.play()
+		
 
 func swing():
 	tween = create_tween()
