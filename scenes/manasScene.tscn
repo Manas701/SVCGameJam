@@ -41,6 +41,7 @@ default_font_size = 32
 
 [sub_resource type="Animation" id="Animation_xsh8g"]
 resource_name = "popup"
+length = 0.5
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ohldl"]
 _data = {
