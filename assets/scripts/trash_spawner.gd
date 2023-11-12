@@ -7,7 +7,9 @@ func _ready():
 
 
 func _on_conductor_beat(position):
-	pass
+	if position % 2 == 0: # I think it should be every 2 beats 
+		print(position)
+		# Spawn trash?
 		
 		
 
