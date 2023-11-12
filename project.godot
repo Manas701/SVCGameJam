@@ -43,3 +43,4 @@ select_right={
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
+environment/defaults/default_environment="res://prefabs/world_environment.tres"
