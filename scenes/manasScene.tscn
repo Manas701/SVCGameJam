@@ -59,7 +59,7 @@ transform = Transform3D(0.315285, 0.948997, 0, -0.948997, 0.315285, 0, 0, 0, 1, 
 script = ExtResource("2_whjhi")
 
 [node name="trash" parent="." instance=ExtResource("7_wwkud")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, -5)
 
 [node name="AnimationPlayer" parent="trash" instance=ExtResource("7_gctov")]
 
@@ -89,3 +89,4 @@ surface_material_override/1 = ExtResource("13_crcg0")
 [node name="Trash_Spawner" parent="." instance=ExtResource("14_6iui7")]
 
 [editable path="trash/AnimationPlayer"]
+[editable path="Trash_Spawner"]
