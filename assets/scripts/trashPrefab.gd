@@ -1,6 +1,7 @@
 extends Node
 
 @onready var anim = $AnimationPlayer
+@onready var textAnim = $MissText/AnimationPlayer
 var trash_type: Node
 var chosenTrash
 
@@ -21,9 +22,13 @@ func hit():
 
 func on_trash_landed(_event):
 	if (chosenTrash.trash_type == get_parent().get_parent().get_node(get_parent().get_parent().get_node("PlayerInput").whichBin).trash_type):
+		#play hit text animation player
+		textAnim.play("popup")
 		print("Right Bin! :)")
 		Scorer.score += 1
 	else:
+		#play miss text animation player
+		textAnim.play("popup")
 		print("Wrong Bin! :(")
 		Scorer.score -= 1
 		
