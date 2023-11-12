@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmsyawi4g6mgw"]
+
+[ext_resource type="FontFile" uid="uid://brlxgerq8nwag" path="res://assets/fonts/Chewy-Regular.ttf" id="1_3e88e"]
+[ext_resource type="Script" path="res://assets/scripts/startButton.gd" id="2_x6cyq"]
+[ext_resource type="Script" path="res://assets/scripts/quitButton.gd" id="3_tnquk"]
+[ext_resource type="Script" path="res://assets/scripts/creditsButton.gd" id="4_b3uy1"]
+
+[node name="Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 443.0
+offset_top = 58.0
+offset_right = 862.0
+offset_bottom = 190.0
+theme_override_fonts/font = ExtResource("1_3e88e")
+theme_override_font_sizes/font_size = 100
+text = "Trash Hero"
+
+[node name="startButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 323.0
+offset_top = 559.0
+offset_right = 505.0
+offset_bottom = 617.0
+theme_override_fonts/font = ExtResource("1_3e88e")
+theme_override_font_sizes/font_size = 24
+text = "Play Game"
+script = ExtResource("2_x6cyq")
+
+[node name="quitButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 780.0
+offset_top = 559.0
+offset_right = 962.0
+offset_bottom = 617.0
+theme_override_fonts/font = ExtResource("1_3e88e")
+theme_override_font_sizes/font_size = 24
+text = "Quit"
+script = ExtResource("3_tnquk")
+
+[node name="creditsButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 551.0
+offset_top = 559.0
+offset_right = 733.0
+offset_bottom = 617.0
+theme_override_fonts/font = ExtResource("1_3e88e")
+theme_override_font_sizes/font_size = 24
+text = "Credits"
+script = ExtResource("4_b3uy1")
+
+[connection signal="pressed" from="startButton" to="startButton" method="_on_pressed"]
+[connection signal="pressed" from="quitButton" to="quitButton" method="_on_pressed"]
+[connection signal="pressed" from="creditsButton" to="creditsButton" method="_on_pressed"]
