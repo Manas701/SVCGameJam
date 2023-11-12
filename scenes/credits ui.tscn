@@ -11,7 +11,19 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="backButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 91.0
+offset_right = 325.0
+offset_bottom = 141.0
+theme_override_fonts/font = ExtResource("1_t3ujt")
+theme_override_font_sizes/font_size = 24
+text = "Back"
+script = ExtResource("2_w82uv")
+
 [node name="Title" type="Label" parent="."]
+layout_mode = 0
 offset_left = 427.0
 offset_top = 58.0
 offset_right = 846.0
@@ -61,13 +73,4 @@ theme_override_fonts/font = ExtResource("1_t3ujt")
 theme_override_font_sizes/font_size = 32
 text = "Andrew Li - Game Design, UI Design, Programming"
 
-[node name="backButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 200.0
-offset_top = 91.0
-offset_right = 325.0
-offset_bottom = 141.0
-theme_override_fonts/font = ExtResource("1_t3ujt")
-theme_override_font_sizes/font_size = 24
-text = "Back"
-script = ExtResource("2_w82uv")
+[connection signal="pressed" from="backButton" to="backButton" method="_on_pressed"]
