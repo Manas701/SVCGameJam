@@ -17,14 +17,18 @@ func _input(event):
 		hit()
 
 func hit():
-	anim.play(get_parent().get_node("PlayerInput").whichAnim)
+	anim.play(get_parent().get_parent().get_node("PlayerInput").whichAnim)
 
 func on_trash_landed(_event):
-	if (chosenTrash.trash_type == get_parent().get_node(get_parent().get_node("PlayerInput").whichBin).trash_type):
+	if (chosenTrash.trash_type == get_parent().get_parent().get_node(get_parent().get_parent().get_node("PlayerInput").whichBin).trash_type):
 		print("Right Bin! :)")
 		Scorer.score += 1
 	else:
 		print("Wrong Bin! :(")
 		Scorer.score -= 1
+		
+	# Audio stuff - Kai
+	chosenTrash.audio.play(0.0)
+	#print(chosenTrash.audio.stream)
 
 	queue_free()

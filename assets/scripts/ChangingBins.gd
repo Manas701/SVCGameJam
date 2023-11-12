@@ -11,6 +11,8 @@ func _ready():
 	whichAnim = binAnims[selectedAnim]
 	whichBin = binTypes[selectedAnim]
 #	anim.play("hover")
+	print(get_node("UI_Arrow"))
+	print(self.get_path())
 
 func _input(event):
 	if (event.is_action_pressed("select_left") && selectedAnim > 0):

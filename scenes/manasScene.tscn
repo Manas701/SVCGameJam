@@ -1,10 +1,9 @@
-[gd_scene load_steps=24 format=3 uid="uid://cmk3w3urbdkri"]
+[gd_scene load_steps=23 format=3 uid="uid://cmk3w3urbdkri"]
 
 [ext_resource type="Script" path="res://assets/scripts/trash.gd" id="2_tnpwx"]
 [ext_resource type="Script" path="res://assets/scripts/bat.gd" id="2_whjhi"]
 [ext_resource type="PackedScene" uid="uid://e74xo05y6nei" path="res://prefabs/bin_recycle.tscn" id="6_018ci"]
 [ext_resource type="PackedScene" uid="uid://hpv7wre553nk" path="res://prefabs/bat.tscn" id="7_5fts6"]
-[ext_resource type="PackedScene" uid="uid://dpvfjowh2mn4x" path="res://prefabs/animation_player.tscn" id="7_gctov"]
 [ext_resource type="PackedScene" uid="uid://blrsu6t7na4pf" path="res://prefabs/bin_compost.tscn" id="7_ke1kv"]
 [ext_resource type="Script" path="res://assets/scripts/ChangingBins.gd" id="7_kxg3g"]
 [ext_resource type="PackedScene" uid="uid://tx72n0re52ye" path="res://prefabs/trash.tscn" id="7_wwkud"]
@@ -78,8 +77,6 @@ script = ExtResource("2_whjhi")
 [node name="trash" parent="." instance=ExtResource("7_wwkud")]
 transform = Transform3D(1, 0, 0, 0, 0.939701, 0.341996, 0, -0.341996, 0.939701, 0, 1, -1.5)
 
-[node name="AnimationPlayer" parent="trash" instance=ExtResource("7_gctov")]
-
 [node name="PlayerInput" type="Node" parent="."]
 script = ExtResource("7_kxg3g")
 whichBin = "1"
@@ -104,6 +101,7 @@ surface_material_override/0 = ExtResource("13_crcg0")
 surface_material_override/1 = ExtResource("13_crcg0")
 
 [node name="Trash_Spawner" parent="." instance=ExtResource("14_6iui7")]
+transform = Transform3D(1, 0, 0, 0, 0.939693, -0.34202, 0, 0.34202, 0.939693, 0, 1, -1.5)
 
 [node name="Scorer" type="Node3D" parent="."]
 script = ExtResource("15_x33cw")
@@ -138,5 +136,4 @@ font_size = 100
 outline_size = 0
 script = ExtResource("19_oa6cd")
 
-[editable path="trash/AnimationPlayer"]
 [editable path="Trash_Spawner"]

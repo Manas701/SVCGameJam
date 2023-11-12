@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://tx72n0re52ye"]
+[gd_scene load_steps=11 format=3 uid="uid://tx72n0re52ye"]
 
 [ext_resource type="PackedScene" uid="uid://dwfde5sd6trl7" path="res://prefabs/trash_bone.tscn" id="1_rpexv"]
 [ext_resource type="Script" path="res://assets/scripts/trashPrefab.gd" id="1_wf36i"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://74bqe0ot35sf" path="res://prefabs/trash_bottle_purple.tscn" id="4_fgdhr"]
 [ext_resource type="PackedScene" uid="uid://cve1sbdchatct" path="res://prefabs/trash_paper.tscn" id="5_y28u3"]
 [ext_resource type="PackedScene" uid="uid://c0lx2ipsxpia0" path="res://prefabs/trash_can.tscn" id="7_4m2hr"]
+[ext_resource type="PackedScene" uid="uid://dpvfjowh2mn4x" path="res://prefabs/animation_player.tscn" id="10_kqakl"]
 
 [node name="trash" type="Node3D"]
 script = ExtResource("1_wf36i")
@@ -47,3 +48,5 @@ trash_type = "Recycling"
 visible = false
 script = ExtResource("2_i1a7u")
 trash_type = "Trash"
+
+[node name="AnimationPlayer" parent="." instance=ExtResource("10_kqakl")]
