@@ -5,7 +5,7 @@ var binTypes = ["Bin_Trash", "Bin_Recycle", "Bin_Compost"]
 var selectedAnim = 1
 @export var whichAnim: String
 @export var whichBin: String
-@onready var anim = $UI_Arrow/AnimationPlayer
+#@onready var anim = $UI_Arrow/AnimationPlayer
 
 func _ready():
 	whichAnim = binAnims[selectedAnim]
