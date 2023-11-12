@@ -18,6 +18,7 @@ config/icon="res://assets/2DAssets/icon.svg"
 [autoload]
 
 Scorer="*res://assets/scripts/Scorer.gd"
+PlayerInput="*res://assets/scripts/ChangingBins.gd"
 
 [display]
 

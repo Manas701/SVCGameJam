@@ -28,7 +28,7 @@ func on_trash_landed(_event):
 		Scorer.score -= 1
 		
 	# Audio stuff - Kai
-	chosenTrash.audio.play(0)
-	print(chosenTrash.audio.is_playing())
+	chosenTrash.audio.play(0.0)
+	print(chosenTrash.audio.stream)
 
 	queue_free()
