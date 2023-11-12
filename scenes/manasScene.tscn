@@ -75,7 +75,12 @@ transform = Transform3D(0.315285, 0.948997, 0, -0.948997, 0.315285, 0, 0, 0, 1, 
 script = ExtResource("2_whjhi")
 
 [node name="trash" parent="." instance=ExtResource("7_wwkud")]
-transform = Transform3D(1, 0, 0, 0, 0.939701, 0.341996, 0, -0.341996, 0.939701, 0, 1, -1.5)
+process_mode = 4
+transform = Transform3D(1, 0, 0, 0, 0.664816, 0.747007, 0, -0.747007, 0.664816, 0, -0.993949, 0.991364)
+visible = false
+
+[node name="Trash_Apple" parent="trash" index="0"]
+visible = true
 
 [node name="PlayerInput" type="Node" parent="."]
 script = ExtResource("7_kxg3g")
@@ -136,4 +141,5 @@ font_size = 100
 outline_size = 0
 script = ExtResource("19_oa6cd")
 
+[editable path="trash"]
 [editable path="Trash_Spawner"]
