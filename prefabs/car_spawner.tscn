@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://ci0dyooqj357r"]
 
 [ext_resource type="Script" path="res://assets/scripts/CarSpawner.gd" id="1_615mr"]
-[ext_resource type="PackedScene" uid="uid://cdf6p7dii0so4" path="res://prefabs/cars.tscn" id="2_da3ge"]
+[ext_resource type="PackedScene" path="res://prefabs/cars.tscn" id="2_da3ge"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xxwrv"]
 size = Vector3(8.61135, 5.32401, 2)
