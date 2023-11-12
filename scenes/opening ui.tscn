@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://assets/scripts/quitButton.gd" id="3_tnquk"]
 [ext_resource type="Script" path="res://assets/scripts/creditsButton.gd" id="4_b3uy1"]
 
-[node name="Control" type="Control"]
+[node name="Main Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
