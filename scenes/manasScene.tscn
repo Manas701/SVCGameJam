@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cmk3w3urbdkri"]
+[gd_scene load_steps=18 format=3 uid="uid://cmk3w3urbdkri"]
 
 [ext_resource type="Script" path="res://assets/scripts/trash.gd" id="2_tnpwx"]
 [ext_resource type="Script" path="res://assets/scripts/bat.gd" id="2_whjhi"]
@@ -14,6 +14,7 @@
 [ext_resource type="Material" uid="uid://cfrmr730rvkhs" path="res://assets/3DAssets/models_obj/textures/textureMaterial.tres" id="13_crcg0"]
 [ext_resource type="PackedScene" uid="uid://xv0tk6gk4pe7" path="res://prefabs/ui_arrow.tscn" id="13_lmqbc"]
 [ext_resource type="PackedScene" uid="uid://dj0rduhi3ivhi" path="res://prefabs/trash_spawner.tscn" id="14_6iui7"]
+[ext_resource type="Script" path="res://assets/scripts/Scorer.gd" id="15_x33cw"]
 
 [sub_resource type="Animation" id="Animation_5ov5y"]
 resource_name = "hover"
@@ -59,7 +60,7 @@ transform = Transform3D(0.315285, 0.948997, 0, -0.948997, 0.315285, 0, 0, 0, 1, 
 script = ExtResource("2_whjhi")
 
 [node name="trash" parent="." instance=ExtResource("7_wwkud")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, -5)
+transform = Transform3D(1, 0, 0, 0, 0.939701, 0.341996, 0, -0.341996, 0.939701, 0, 1, -1.5)
 
 [node name="AnimationPlayer" parent="trash" instance=ExtResource("7_gctov")]
 
@@ -87,6 +88,9 @@ surface_material_override/0 = ExtResource("13_crcg0")
 surface_material_override/1 = ExtResource("13_crcg0")
 
 [node name="Trash_Spawner" parent="." instance=ExtResource("14_6iui7")]
+
+[node name="Scorer" type="Node3D" parent="."]
+script = ExtResource("15_x33cw")
 
 [editable path="trash/AnimationPlayer"]
 [editable path="Trash_Spawner"]
