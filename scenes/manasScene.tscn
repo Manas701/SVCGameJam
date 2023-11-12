@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cmk3w3urbdkri"]
+[gd_scene load_steps=24 format=3 uid="uid://cmk3w3urbdkri"]
 
 [ext_resource type="Script" path="res://assets/scripts/trash.gd" id="2_tnpwx"]
 [ext_resource type="Script" path="res://assets/scripts/bat.gd" id="2_whjhi"]
@@ -17,6 +17,7 @@
 [ext_resource type="Script" path="res://assets/scripts/Scorer.gd" id="15_x33cw"]
 [ext_resource type="FontFile" uid="uid://brlxgerq8nwag" path="res://assets/fonts/Chewy-Regular.ttf" id="16_60uhs"]
 [ext_resource type="Script" path="res://assets/scripts/score_label.gd" id="16_kdtlo"]
+[ext_resource type="Script" path="res://assets/scripts/HitText.gd" id="19_oa6cd"]
 
 [sub_resource type="Animation" id="Animation_5ov5y"]
 resource_name = "hover"
@@ -37,6 +38,14 @@ _data = {
 [sub_resource type="Theme" id="Theme_axrff"]
 default_font = ExtResource("16_60uhs")
 default_font_size = 32
+
+[sub_resource type="Animation" id="Animation_xsh8g"]
+resource_name = "popup"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ohldl"]
+_data = {
+"popup": SubResource("Animation_xsh8g")
+}
 
 [node name="manasScene" type="Node3D"]
 
@@ -106,6 +115,27 @@ bbcode_enabled = true
 text = "[center]0[/center]"
 fit_content = true
 script = ExtResource("16_kdtlo")
+
+[node name="MissText" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0350444, -3.0527, -6.73659)
+text = "Miss!"
+font = ExtResource("16_60uhs")
+font_size = 100
+outline_size = 0
+script = ExtResource("19_oa6cd")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MissText"]
+libraries = {
+"": SubResource("AnimationLibrary_ohldl")
+}
+
+[node name="HitText" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0350444, -3.0527, -6.73659)
+text = "Great!"
+font = ExtResource("16_60uhs")
+font_size = 100
+outline_size = 0
+script = ExtResource("19_oa6cd")
 
 [editable path="trash/AnimationPlayer"]
 [editable path="Trash_Spawner"]
