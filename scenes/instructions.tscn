@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://cc25lrhtpd4ei"]
+[gd_scene load_steps=7 format=3 uid="uid://cc25lrhtpd4ei"]
 
 [ext_resource type="PackedScene" uid="uid://e74xo05y6nei" path="res://prefabs/bin_recycle.tscn" id="1_4ssdq"]
 [ext_resource type="Script" path="res://assets/scripts/trash.gd" id="2_gaho7"]
 [ext_resource type="PackedScene" uid="uid://blrsu6t7na4pf" path="res://prefabs/bin_compost.tscn" id="3_ua8xh"]
 [ext_resource type="PackedScene" uid="uid://dcj2ftby2qt52" path="res://prefabs/bin_trash.tscn" id="4_86s0v"]
+[ext_resource type="PackedScene" uid="uid://dopcrjou2falg" path="res://scenes/instructions ui.tscn" id="6_skllk"]
 [ext_resource type="PackedScene" path="res://prefabs/street_environment.tscn" id="11_qq8u4"]
 
 [node name="manasScene" type="Node3D"]
@@ -31,3 +32,7 @@ trash_type = "Trash"
 
 [node name="street_environment" parent="." instance=ExtResource("11_qq8u4")]
 transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0, -0.724239, -5.68252)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" parent="CanvasLayer" instance=ExtResource("6_skllk")]
