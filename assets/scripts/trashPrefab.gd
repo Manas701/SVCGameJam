@@ -1,6 +1,7 @@
 extends Node
 
 @onready var anim = $AnimationPlayer
+
 var trash_type: Node
 var chosenTrash: CharacterBody3D
 var wasBatted = false
@@ -29,9 +30,11 @@ func hit():
 func on_trash_landed(_event):
 	if (wasBatted):
 		if (chosenTrash.trash_type == get_parent().get_parent().get_node(get_parent().get_parent().get_node("PlayerInput").whichBin).trash_type):
+			get_parent().get_parent().get_node("HitText/AnimationPlayer").play("popup")
 			print("Right Bin! :)")
 			Scorer.score += 1
 		else:
+			get_parent().get_parent().get_node("MissText/AnimationPlayer").play("popup")
 			print("Wrong Bin! :(")
 			#Scorer.score -= 1
 		# Audio stuff - Kai

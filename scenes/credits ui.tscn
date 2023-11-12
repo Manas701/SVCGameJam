@@ -15,23 +15,13 @@ grow_vertical = 2
 layout_mode = 0
 offset_left = 200.0
 offset_top = 91.0
-offset_right = 325.0
-offset_bottom = 141.0
+offset_right = 382.0
+offset_bottom = 149.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_t3ujt")
 theme_override_font_sizes/font_size = 24
 text = "Back"
 script = ExtResource("2_w82uv")
-
-[node name="Title" type="Label" parent="."]
-layout_mode = 0
-offset_left = 427.0
-offset_top = 58.0
-offset_right = 846.0
-offset_bottom = 190.0
-theme_override_fonts/font = ExtResource("1_t3ujt")
-theme_override_font_sizes/font_size = 100
-text = "Credits"
-horizontal_alignment = 1
 
 [node name="Kai" type="Label" parent="."]
 layout_mode = 0
@@ -51,7 +41,7 @@ offset_right = 979.0
 offset_bottom = 644.0
 theme_override_fonts/font = ExtResource("1_t3ujt")
 theme_override_font_sizes/font_size = 32
-text = "Bia Villamor - Game Design, Sound Design, Music, Programming"
+text = "Bia Villamor - Game Design, Sound Design, Music, UI Design, Programming"
 
 [node name="Manas" type="Label" parent="."]
 layout_mode = 0
@@ -72,5 +62,16 @@ offset_bottom = 501.0
 theme_override_fonts/font = ExtResource("1_t3ujt")
 theme_override_font_sizes/font_size = 32
 text = "Andrew Li - Game Design, UI Design, Programming"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+clip_contents = false
+offset_left = 500.0
+offset_top = 58.0
+offset_right = 794.0
+offset_bottom = 190.0
+theme_override_fonts/normal_font = ExtResource("1_t3ujt")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "[wave amp=40 freq=3]Credits[/wave]"
 
 [connection signal="pressed" from="backButton" to="backButton" method="_on_pressed"]
