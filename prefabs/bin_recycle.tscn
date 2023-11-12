@@ -8,3 +8,5 @@
 mesh = ExtResource("1_nhwql")
 surface_material_override/0 = ExtResource("2_d7i38")
 surface_material_override/1 = ExtResource("3_1rhha")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

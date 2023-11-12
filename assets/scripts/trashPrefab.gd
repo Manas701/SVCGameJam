@@ -26,5 +26,9 @@ func on_trash_landed(_event):
 	else:
 		print("Wrong Bin! :(")
 		Scorer.score -= 1
+		
+	# Audio stuff - Kai
+	chosenTrash.audio.play(0)
+	print(chosenTrash.audio.is_playing())
 
 	queue_free()
