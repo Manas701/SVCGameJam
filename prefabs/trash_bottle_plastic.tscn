@@ -10,6 +10,7 @@ size = Vector3(0.183638, 0.315718, 0.185105)
 [node name="Trash_Bottle_Plastic" type="CharacterBody3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0)
 mesh = ExtResource("1_rdsx1")
 surface_material_override/0 = ExtResource("2_e7fw2")
 
