@@ -1,8 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://xv0tk6gk4pe7"]
-
-[ext_resource type="ArrayMesh" uid="uid://cm5b8lbkfdhdg" path="res://assets/3DAssets/models_obj/UI_Arrow.obj" id="1_x73rk"]
-[ext_resource type="Material" uid="uid://cfrmr730rvkhs" path="res://assets/3DAssets/models_obj/textures/textureMaterial.tres" id="2_v7qif"]
-
-[node name="UI_Arrow" type="MeshInstance3D"]
-mesh = ExtResource("1_x73rk")
-surface_material_override/0 = ExtResource("2_v7qif")

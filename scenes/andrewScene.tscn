@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://dn0f5hple32ht"]
+
+[ext_resource type="PackedScene" uid="uid://dmsyawi4g6mgw" path="res://scenes/main menu.tscn" id="2_h07u2"]
+[ext_resource type="Script" path="res://assets/scripts/startButton.gd" id="2_rtv6w"]
+[ext_resource type="PackedScene" uid="uid://blrsu6t7na4pf" path="res://prefabs/bin_compost.tscn" id="3_flcgy"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5lfbw"]
+
+[sub_resource type="Sky" id="Sky_fn5y6"]
+sky_material = SubResource("ProceduralSkyMaterial_5lfbw")
+
+[sub_resource type="Environment" id="Environment_jd2x6"]
+background_mode = 2
+sky = SubResource("Sky_fn5y6")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_jd2x6")
+
+[node name="Camera3D" type="Camera3D" parent="WorldEnvironment"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" parent="CanvasLayer" instance=ExtResource("2_h07u2")]
+script = ExtResource("2_rtv6w")
+
+[node name="Bin_Compost" parent="." instance=ExtResource("3_flcgy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.131283, 0, -2.73551)

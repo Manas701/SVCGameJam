@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dmsyawi4g6mgw"]
+[gd_scene load_steps=2 format=3 uid="uid://dmsyawi4g6mgw"]
 
 [ext_resource type="Script" path="res://assets/scripts/startButton.gd" id="1_jfpvg"]
-[ext_resource type="FontFile" uid="uid://brlxgerq8nwag" path="res://assets/fonts/Chewy-Regular.ttf" id="1_qjs83"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -13,45 +12,19 @@ grow_vertical = 2
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 0
-offset_left = 443.0
-offset_top = 74.0
-offset_right = 862.0
-offset_bottom = 206.0
-theme_override_fonts/font = ExtResource("1_qjs83")
-theme_override_font_sizes/font_size = 100
+offset_left = 622.0
+offset_top = 161.0
+offset_right = 708.0
+offset_bottom = 187.0
 text = "Trash Hero"
 
 [node name="startButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 323.0
-offset_top = 559.0
-offset_right = 505.0
-offset_bottom = 617.0
-theme_override_fonts/font = ExtResource("1_qjs83")
-theme_override_font_sizes/font_size = 24
+offset_left = 546.0
+offset_top = 413.0
+offset_right = 787.0
+offset_bottom = 494.0
 text = "Play Game"
 script = ExtResource("1_jfpvg")
 
-[node name="startButton2" type="Button" parent="."]
-layout_mode = 0
-offset_left = 789.0
-offset_top = 559.0
-offset_right = 971.0
-offset_bottom = 617.0
-theme_override_fonts/font = ExtResource("1_qjs83")
-theme_override_font_sizes/font_size = 24
-text = "Quit"
-
-[node name="startButton3" type="Button" parent="."]
-layout_mode = 0
-offset_left = 556.0
-offset_top = 559.0
-offset_right = 738.0
-offset_bottom = 617.0
-theme_override_fonts/font = ExtResource("1_qjs83")
-theme_override_font_sizes/font_size = 24
-text = "Credits"
-
 [connection signal="pressed" from="startButton" to="startButton" method="_on_pressed"]
-[connection signal="pressed" from="startButton2" to="startButton2" method="_on_pressed"]
-[connection signal="pressed" from="startButton3" to="startButton3" method="_on_pressed"]
