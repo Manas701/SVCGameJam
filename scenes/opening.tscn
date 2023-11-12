@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://dn0f5hple32ht"]
+[gd_scene load_steps=9 format=3 uid="uid://xxe5bg1qgh0h"]
 
 [ext_resource type="PackedScene" uid="uid://dmsyawi4g6mgw" path="res://scenes/opening ui.tscn" id="1_5bewx"]
 [ext_resource type="Script" path="res://assets/scripts/startButton.gd" id="2_3ouev"]
 [ext_resource type="PackedScene" uid="uid://blrsu6t7na4pf" path="res://prefabs/bin_compost.tscn" id="3_5x1yd"]
-[ext_resource type="PackedScene" path="res://prefabs/street_environment.tscn" id="4_bpn6e"]
-[ext_resource type="PackedScene" path="res://prefabs/world_environment.tscn" id="5_n1ork"]
+[ext_resource type="PackedScene" uid="uid://vx8thkpwhynj" path="res://prefabs/street_environment.tscn" id="4_bpn6e"]
+[ext_resource type="PackedScene" uid="uid://d2hb0qqj1wx6s" path="res://prefabs/world_environment.tscn" id="5_n1ork"]
 [ext_resource type="PackedScene" uid="uid://dcj2ftby2qt52" path="res://prefabs/bin_trash.tscn" id="6_y4mou"]
 [ext_resource type="PackedScene" uid="uid://e74xo05y6nei" path="res://prefabs/bin_recycle.tscn" id="7_pomkq"]
+[ext_resource type="AudioStream" uid="uid://2u5mk0ke3p0e" path="res://assets/AudioAssets/title_screen_theme.ogg" id="8_o64ld"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -31,3 +32,7 @@ transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 3.768,
 
 [node name="Bin_Trash" parent="." instance=ExtResource("6_y4mou")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 3.768, 0, -2.148)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_o64ld")
+autoplay = true

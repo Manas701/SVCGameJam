@@ -7,6 +7,7 @@
 size = Vector3(0.134489, 0.346372, 0.149258)
 
 [node name="Trash_Bone" type="CharacterBody3D"]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_c80en")

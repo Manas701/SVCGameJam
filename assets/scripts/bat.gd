@@ -19,4 +19,3 @@ func swing():
 	tween.tween_property(self, "rotation_degrees", endRotation, swingTime).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 	tween.tween_interval(waitTime)
 	tween.tween_property(self, "rotation_degrees", ogRotation, returnTime).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
-	print("Bat Swung")
