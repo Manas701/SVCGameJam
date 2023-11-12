@@ -8,7 +8,31 @@
 [ext_resource type="PackedScene" path="res://prefabs/bin_compost.tscn" id="7_ke1kv"]
 [ext_resource type="PackedScene" uid="uid://tx72n0re52ye" path="res://prefabs/trash.tscn" id="7_wwkud"]
 [ext_resource type="PackedScene" path="res://prefabs/bin_trash.tscn" id="8_nec8g"]
-[ext_resource type="Script" path="res://assets/scripts/ChangingBins.gd" id="9_8ctjd"]
+
+[sub_resource type="GDScript" id="GDScript_0lt75"]
+script/source = "extends Node
+
+var binAnims = [\"hit_left\", \"hit_center\", \"hit_right\"]
+var binTypes = [\"Bin_Trash\", \"Bin_Recycle\", \"Bin_Compost\"]
+var selectedAnim = 1
+@export var whichAnim: String
+@export var whichBin: String 
+
+func _ready():
+	whichAnim = binAnims[selectedAnim]
+	whichBin = binTypes[selectedAnim]
+
+func _input(event):
+	if (event.is_action_pressed(\"select_left\") && selectedAnim > 0):
+		selectedAnim -= 1
+		whichAnim = binAnims[selectedAnim]
+		whichBin = binTypes[selectedAnim]
+		
+	if (event.is_action_pressed(\"select_right\") && selectedAnim < 2):
+		selectedAnim += 1
+		whichAnim = binAnims[selectedAnim]
+		whichBin = binTypes[selectedAnim]
+"
 
 [node name="manasScene" type="Node3D"]
 
@@ -42,6 +66,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, -1.5)
 [node name="AnimationPlayer" parent="trash" instance=ExtResource("7_gctov")]
 
 [node name="PlayerInput" type="Node" parent="."]
-script = ExtResource("9_8ctjd")
+script = SubResource("GDScript_0lt75")
 whichBin = "1"
 metadata/animName = ""
