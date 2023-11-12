@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dj0rduhi3ivhi"]
+
+[ext_resource type="Script" path="res://assets/scripts/trash_spawner.gd" id="1_v5hur"]
+
+[node name="Trash_Spawner" type="Node3D"]
+script = ExtResource("1_v5hur")
