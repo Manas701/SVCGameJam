@@ -39,6 +39,8 @@ func _report_beat():
 		emit_signal("measure_signal", measure)
 		last_reported_beat = song_position_in_beats
 		measure += 1
+		
+		#print("Measure: " + str(measure))
 
 
 func play_with_beat_offset(num):

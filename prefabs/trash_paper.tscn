@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cve1sbdchatct"]
+[gd_scene load_steps=5 format=3 uid="uid://cve1sbdchatct"]
 
 [ext_resource type="ArrayMesh" uid="uid://cbw6v1wro3qnj" path="res://assets/3DAssets/models_obj/Trash_Paper.obj" id="1_38iqu"]
 [ext_resource type="Material" uid="uid://cfrmr730rvkhs" path="res://assets/3DAssets/models_obj/textures/textureMaterial.tres" id="2_q4pej"]
+[ext_resource type="AudioStream" uid="uid://cfjkbpaviq8vi" path="res://assets/AudioAssets/PAPER.wav" id="3_0qpwd"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pxc4j"]
 size = Vector3(0.183638, 0.204039, 0.185105)
@@ -14,3 +15,6 @@ surface_material_override/0 = ExtResource("2_q4pej")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_pxc4j")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_0qpwd")

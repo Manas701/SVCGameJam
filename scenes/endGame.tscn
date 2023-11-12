@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://bhkn7l2aus61e"]
+
+[ext_resource type="PackedScene" uid="uid://csmhoeo7vg0tr" path="res://scenes/endGameUI.tscn" id="1_5t3pl"]
+[ext_resource type="PackedScene" uid="uid://d2hb0qqj1wx6s" path="res://prefabs/world_environment.tscn" id="2_g2wi6"]
+[ext_resource type="PackedScene" uid="uid://vx8thkpwhynj" path="res://prefabs/street_environment.tscn" id="3_76ey8"]
+[ext_resource type="Material" uid="uid://cfrmr730rvkhs" path="res://assets/3DAssets/models_obj/textures/textureMaterial.tres" id="4_h1vt5"]
+[ext_resource type="AudioStream" uid="uid://2u5mk0ke3p0e" path="res://assets/AudioAssets/title_screen_theme.ogg" id="4_jnyxn"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-4.36922e-08, -0.243615, 0.969872, 1.29675e-09, 0.969872, 0.243615, -1, 1.19017e-08, -4.20599e-08, 8.05268, 2.74171, 0)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera3D"]
+
+[node name="endGame" parent="Camera3D" instance=ExtResource("1_5t3pl")]
+
+[node name="WorldEnvironment" parent="." instance=ExtResource("2_g2wi6")]
+
+[node name="street_environment" parent="." instance=ExtResource("3_76ey8")]
+surface_material_override/0 = ExtResource("4_h1vt5")
+surface_material_override/1 = ExtResource("4_h1vt5")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_jnyxn")
+autoplay = true

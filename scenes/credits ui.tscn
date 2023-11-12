@@ -1,0 +1,76 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxnfrrkg3ujf8"]
+
+[ext_resource type="FontFile" uid="uid://brlxgerq8nwag" path="res://assets/fonts/Chewy-Regular.ttf" id="1_t3ujt"]
+[ext_resource type="Script" path="res://assets/scripts/backButton.gd" id="2_w82uv"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="backButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 91.0
+offset_right = 325.0
+offset_bottom = 141.0
+theme_override_fonts/font = ExtResource("1_t3ujt")
+theme_override_font_sizes/font_size = 24
+text = "Back"
+script = ExtResource("2_w82uv")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 427.0
+offset_top = 58.0
+offset_right = 846.0
+offset_bottom = 190.0
+theme_override_fonts/font = ExtResource("1_t3ujt")
+theme_override_font_sizes/font_size = 100
+text = "Credits"
+horizontal_alignment = 1
+
+[node name="Kai" type="Label" parent="."]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 386.0
+offset_right = 758.0
+offset_bottom = 431.0
+theme_override_fonts/font = ExtResource("1_t3ujt")
+theme_override_font_sizes/font_size = 32
+text = "Kai Jacobs - Game Design, Art, Programming"
+
+[node name="Bia" type="Label" parent="."]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 599.0
+offset_right = 979.0
+offset_bottom = 644.0
+theme_override_fonts/font = ExtResource("1_t3ujt")
+theme_override_font_sizes/font_size = 32
+text = "Bia Villamor - Game Design, Sound Design, Music, Programming"
+
+[node name="Manas" type="Label" parent="."]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 526.0
+offset_right = 711.0
+offset_bottom = 571.0
+theme_override_fonts/font = ExtResource("1_t3ujt")
+theme_override_font_sizes/font_size = 32
+text = "Manas Sara - Game Design, Programming"
+
+[node name="Andrew" type="Label" parent="."]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 456.0
+offset_right = 834.0
+offset_bottom = 501.0
+theme_override_fonts/font = ExtResource("1_t3ujt")
+theme_override_font_sizes/font_size = 32
+text = "Andrew Li - Game Design, UI Design, Programming"
+
+[connection signal="pressed" from="backButton" to="backButton" method="_on_pressed"]

@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://l7ymf66qs6xr"]
+
+[ext_resource type="ArrayMesh" uid="uid://b7qw722ntrqva" path="res://assets/3DAssets/models_obj/Trash_Apple.obj" id="1_3mfwv"]
+[ext_resource type="Material" uid="uid://cfrmr730rvkhs" path="res://assets/3DAssets/models_obj/textures/textureMaterial.tres" id="2_3rd12"]
+[ext_resource type="AudioStream" uid="uid://0qwqdc1ig4pu" path="res://assets/AudioAssets/TRASH.wav" id="3_rxqia"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pxc4j"]
+size = Vector3(0.349533, 0.346372, 0.307385)
+
+[node name="Trash_Apple" type="CharacterBody3D"]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+mesh = ExtResource("1_3mfwv")
+surface_material_override/0 = ExtResource("2_3rd12")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_pxc4j")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_rxqia")

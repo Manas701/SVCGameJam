@@ -1,15 +1,23 @@
-[gd_scene load_steps=8 format=3 uid="uid://tx72n0re52ye"]
+[gd_scene load_steps=11 format=3 uid="uid://tx72n0re52ye"]
 
-[ext_resource type="PackedScene" path="res://prefabs/trash_bone.tscn" id="1_rpexv"]
+[ext_resource type="PackedScene" uid="uid://dwfde5sd6trl7" path="res://prefabs/trash_bone.tscn" id="1_rpexv"]
 [ext_resource type="Script" path="res://assets/scripts/trashPrefab.gd" id="1_wf36i"]
-[ext_resource type="PackedScene" path="res://prefabs/trash_bottle_green.tscn" id="2_4y3iw"]
+[ext_resource type="PackedScene" uid="uid://c8ydrldfutkh1" path="res://prefabs/trash_bottle_green.tscn" id="2_4y3iw"]
+[ext_resource type="PackedScene" uid="uid://l7ymf66qs6xr" path="res://prefabs/trash_apple.tscn" id="2_ft8tk"]
 [ext_resource type="Script" path="res://assets/scripts/trash.gd" id="2_i1a7u"]
-[ext_resource type="PackedScene" path="res://prefabs/trash_bottle_plastic.tscn" id="3_58ucf"]
-[ext_resource type="PackedScene" path="res://prefabs/trash_bottle_purple.tscn" id="4_fgdhr"]
-[ext_resource type="PackedScene" path="res://prefabs/trash_paper.tscn" id="5_y28u3"]
+[ext_resource type="PackedScene" uid="uid://devrjoeo8evb6" path="res://prefabs/trash_bottle_plastic.tscn" id="3_58ucf"]
+[ext_resource type="PackedScene" uid="uid://74bqe0ot35sf" path="res://prefabs/trash_bottle_purple.tscn" id="4_fgdhr"]
+[ext_resource type="PackedScene" uid="uid://cve1sbdchatct" path="res://prefabs/trash_paper.tscn" id="5_y28u3"]
+[ext_resource type="PackedScene" uid="uid://c0lx2ipsxpia0" path="res://prefabs/trash_can.tscn" id="7_4m2hr"]
+[ext_resource type="PackedScene" uid="uid://dpvfjowh2mn4x" path="res://prefabs/animation_player.tscn" id="10_kqakl"]
 
 [node name="trash" type="Node3D"]
 script = ExtResource("1_wf36i")
+
+[node name="Trash_Apple" parent="." groups=["trashObjects"] instance=ExtResource("2_ft8tk")]
+visible = false
+script = ExtResource("2_i1a7u")
+trash_type = "Compost"
 
 [node name="Trash_Bone" parent="." groups=["trashObjects"] instance=ExtResource("1_rpexv")]
 visible = false
@@ -31,7 +39,14 @@ visible = false
 script = ExtResource("2_i1a7u")
 trash_type = "Recycling"
 
+[node name="Trash_Can" parent="." groups=["trashObjects"] instance=ExtResource("7_4m2hr")]
+visible = false
+script = ExtResource("2_i1a7u")
+trash_type = "Recycling"
+
 [node name="Trash_Paper" parent="." groups=["trashObjects"] instance=ExtResource("5_y28u3")]
 visible = false
 script = ExtResource("2_i1a7u")
 trash_type = "Trash"
+
+[node name="AnimationPlayer" parent="." instance=ExtResource("10_kqakl")]
