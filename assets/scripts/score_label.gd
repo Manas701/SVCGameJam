@@ -8,5 +8,5 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	#text = String("[center]" + Scorer.score + "[/center]")'
+	text = str("[center]" + str(Scorer.score) + "[/center]")
 	pass
