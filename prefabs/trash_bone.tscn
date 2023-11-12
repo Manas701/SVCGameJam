@@ -1,17 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://dwfde5sd6trl7"]
+[gd_scene load_steps=4 format=3 uid="uid://com4kn8l1smh7"]
 
 [ext_resource type="ArrayMesh" uid="uid://cey5pv4xhyycm" path="res://assets/3DAssets/models_obj/Trash_Bone.obj" id="1_c80en"]
 [ext_resource type="Material" uid="uid://cfrmr730rvkhs" path="res://assets/3DAssets/models_obj/textures/textureMaterial.tres" id="2_xjtnf"]
-[ext_resource type="AudioStream" uid="uid://0qwqdc1ig4pu" path="res://assets/AudioAssets/TRASH.wav" id="3_anppb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pxc4j"]
 size = Vector3(0.134489, 0.346372, 0.149258)
 
 [node name="Trash_Bone" type="CharacterBody3D"]
-transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 mesh = ExtResource("1_c80en")
 surface_material_override/0 = ExtResource("2_xjtnf")
 
@@ -19,4 +16,3 @@ surface_material_override/0 = ExtResource("2_xjtnf")
 shape = SubResource("BoxShape3D_pxc4j")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_anppb")

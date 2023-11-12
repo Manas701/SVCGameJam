@@ -19,3 +19,11 @@ func swing():
 	tween.tween_property(self, "rotation_degrees", endRotation, swingTime).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 	tween.tween_interval(waitTime)
 	tween.tween_property(self, "rotation_degrees", ogRotation, returnTime).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+
+func _on_body_entered(body):
+	if body.is_in_group("trashObjects"):
+		body.get_parent().hittable = true
+
+func _on_body_exited(body):
+	if body.is_in_group("trashObjects"):
+		body.get_parent().hittable = false

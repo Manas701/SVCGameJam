@@ -25,7 +25,6 @@ func _spawn_trash():
 	add_child(trashInst)
 	var anim = trashInst.get_node("AnimationPlayer")
 	anim.play("throw_trash")
-	
 
 func _on_conductor_measure_signal(position):
 	if position == 1:
@@ -154,9 +153,9 @@ func _on_conductor_beat(position):
 		spawn_2_beat = 1
 		spawn_3_beat = 0
 		spawn_4_beat = 0
-	
-	
-	
-
-func increment_score(by):
-	pass # Replace with function body.
+#
+#
+#
+#
+#func increment_score(by):
+#	pass # Replace with function body.
