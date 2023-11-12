@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dvxhlobky5o7c"]
 
 [ext_resource type="PackedScene" uid="uid://vx8thkpwhynj" path="res://prefabs/street_environment.tscn" id="1_jhcwy"]
-[ext_resource type="PackedScene" path="res://prefabs/car_spawner.tscn" id="2_us6wg"]
+[ext_resource type="PackedScene" uid="uid://ci0dyooqj357r" path="res://prefabs/car_spawner.tscn" id="2_us6wg"]
 
 [node name="kaiScene" type="Node3D"]
 
