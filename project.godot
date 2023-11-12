@@ -15,6 +15,10 @@ run/main_scene="res://scenes/manasScene.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://assets/2DAssets/icon.svg"
 
+[autoload]
+
+Scorer="*res://assets/scripts/Scorer.gd"
+
 [display]
 
 window/size/viewport_width=1280

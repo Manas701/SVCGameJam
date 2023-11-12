@@ -4,9 +4,9 @@
 [ext_resource type="Material" uid="uid://cfrmr730rvkhs" path="res://assets/3DAssets/models_obj/textures/textureMaterial.tres" id="2_3rd12"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pxc4j"]
-size = Vector3(0.134489, 0.346372, 0.149258)
+size = Vector3(0.349533, 0.346372, 0.307385)
 
-[node name="Trash_Bone" type="CharacterBody3D"]
+[node name="Trash_Apple" type="CharacterBody3D"]
 transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]

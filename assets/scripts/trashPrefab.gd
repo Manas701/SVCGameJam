@@ -22,6 +22,8 @@ func hit():
 func on_trash_landed(_event):
 	if (chosenTrash.trash_type == get_parent().get_node(get_parent().get_node("PlayerInput").whichBin).trash_type):
 		print("Right Bin! :)")
+		Scorer.score += 1
 	else:
 		print("Wrong Bin! :(")
+		Scorer.score -= 1
 	queue_free()
