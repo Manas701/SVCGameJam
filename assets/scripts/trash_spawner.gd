@@ -16,3 +16,6 @@ func _on_conductor_beat(position):
 
 func _on_conductor_measure_signal(_position):
 	pass # Replace with function body.
+
+func spawn_trash():
+	pass
