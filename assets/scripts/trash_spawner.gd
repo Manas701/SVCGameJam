@@ -100,3 +100,7 @@ func _on_conductor_beat(position):
 
 func increment_score(by):
 	pass # Replace with function body.
+
+
+func _on_conductor_finished():
+	pass # Replace with function body.
