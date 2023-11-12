@@ -142,6 +142,7 @@ script = ExtResource("16_kdtlo")
 
 [node name="MissText" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -6.737)
+modulate = Color(0.941176, 0.223529, 0.219608, 1)
 text = "Miss!"
 font = ExtResource("16_60uhs")
 font_size = 100
@@ -153,7 +154,8 @@ libraries = {
 }
 
 [node name="HitText" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -6.73659)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -6.737)
+modulate = Color(0.243137, 0.94902, 0.141176, 1)
 text = "Great!"
 font = ExtResource("16_60uhs")
 font_size = 100
