@@ -14,9 +14,9 @@ func _process(delta):
 	pass
 
 
-func _on_area_3d_area_entered(area):
-	if area.get_parent().is_in_group("car"):
-		print(area.get_parent())
+#func _on_area_3d_area_entered(area):
+#	if area.get_parent().is_in_group("car"):
+#		print(area.get_parent())
 
 func _on_animation_player_animation_finished(_anim_name):
 	cars.new_car()

@@ -12,4 +12,7 @@ transform = Transform3D(-3.74676e-08, -0.515053, 0.857158, -2.25137e-08, 0.85715
 
 [node name="CarSpawner" parent="." instance=ExtResource("2_us6wg")]
 
+[node name="CarStartPosition" parent="CarSpawner" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15.5558)
+
 [editable path="CarSpawner"]
