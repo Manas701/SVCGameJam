@@ -12,22 +12,24 @@ var spawn_2_beat = 0
 var spawn_3_beat = 1
 var spawn_4_beat = 0# Called when the node enters the scene tree for the first time.
 
-#var trash = load(res://pre)
+var trash = preload("res://prefabs/trash.tscn")
 
 func _ready():
 	randomize()
 	$Conductor.play_with_beat_offset(0)
 
 
+
+func _spawn_trash():
+	var trashInst = trash.instantiate()
+	add_child(trashInst)
+	var anim = trashInst.get_node("AnimationPlayer")
+	anim.play("throw_trash")
+	
+
 func _on_conductor_measure_signal(position):
 	if position == 1:
-		_spawn_trash(spawn_1_beat)
-	elif position == 2:
-		_spawn_trash(spawn_2_beat)
-	elif position == 3:
-		_spawn_trash(spawn_3_beat)
-	elif position == 4:
-		_spawn_trash(spawn_4_beat)
+		_spawn_trash()
 
 
 func _on_conductor_beat(position):
@@ -153,11 +155,6 @@ func _on_conductor_beat(position):
 		spawn_3_beat = 0
 		spawn_4_beat = 0
 	
-	
-	
-
-func _spawn_trash(to_spawn):
-	pass # Replace with function body.
 	
 	
 
