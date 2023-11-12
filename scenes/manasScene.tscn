@@ -1,21 +1,20 @@
-[gd_scene load_steps=23 format=3 uid="uid://cmk3w3urbdkri"]
+[gd_scene load_steps=22 format=3 uid="uid://cmk3w3urbdkri"]
 
 [ext_resource type="Script" path="res://assets/scripts/trash.gd" id="2_tnpwx"]
 [ext_resource type="Script" path="res://assets/scripts/bat.gd" id="2_whjhi"]
-[ext_resource type="PackedScene" path="res://prefabs/bin_recycle.tscn" id="6_018ci"]
+[ext_resource type="PackedScene" uid="uid://e74xo05y6nei" path="res://prefabs/bin_recycle.tscn" id="6_018ci"]
 [ext_resource type="PackedScene" uid="uid://hpv7wre553nk" path="res://prefabs/bat.tscn" id="7_5fts6"]
-[ext_resource type="PackedScene" path="res://prefabs/bin_compost.tscn" id="7_ke1kv"]
+[ext_resource type="PackedScene" uid="uid://blrsu6t7na4pf" path="res://prefabs/bin_compost.tscn" id="7_ke1kv"]
 [ext_resource type="Script" path="res://assets/scripts/ChangingBins.gd" id="7_kxg3g"]
-[ext_resource type="PackedScene" path="res://prefabs/bin_trash.tscn" id="8_nec8g"]
+[ext_resource type="PackedScene" uid="uid://dcj2ftby2qt52" path="res://prefabs/bin_trash.tscn" id="8_nec8g"]
 [ext_resource type="PackedScene" uid="uid://ci0dyooqj357r" path="res://prefabs/car_spawner.tscn" id="10_gh5mt"]
-[ext_resource type="PackedScene" path="res://prefabs/street_environment.tscn" id="11_0d368"]
+[ext_resource type="PackedScene" uid="uid://vx8thkpwhynj" path="res://prefabs/street_environment.tscn" id="11_0d368"]
 [ext_resource type="Material" uid="uid://cfrmr730rvkhs" path="res://assets/3DAssets/models_obj/textures/textureMaterial.tres" id="13_crcg0"]
 [ext_resource type="PackedScene" uid="uid://xv0tk6gk4pe7" path="res://prefabs/ui_arrow.tscn" id="13_lmqbc"]
-[ext_resource type="PackedScene" path="res://prefabs/trash_spawner.tscn" id="14_6iui7"]
+[ext_resource type="PackedScene" uid="uid://dj0rduhi3ivhi" path="res://prefabs/trash_spawner.tscn" id="14_6iui7"]
 [ext_resource type="Script" path="res://assets/scripts/Scorer.gd" id="15_x33cw"]
 [ext_resource type="FontFile" uid="uid://brlxgerq8nwag" path="res://assets/fonts/Chewy-Regular.ttf" id="16_60uhs"]
 [ext_resource type="Script" path="res://assets/scripts/score_label.gd" id="16_kdtlo"]
-[ext_resource type="Script" path="res://assets/scripts/HitText.gd" id="19_oa6cd"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_ksrqy"]
 
@@ -42,6 +41,18 @@ default_font_size = 32
 [sub_resource type="Animation" id="Animation_xsh8g"]
 resource_name = "popup"
 length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.4, 0.5),
+"transitions": PackedFloat32Array(0.170755, 1, 0.148651, 1),
+"update": 0,
+"values": [Vector3(0, -1, -6.73659), Vector3(0, 3, -6.737), Vector3(0, 3, -6.737), Vector3(0, -1, -6.737)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ohldl"]
 _data = {
@@ -119,12 +130,12 @@ fit_content = true
 script = ExtResource("16_kdtlo")
 
 [node name="MissText" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0350444, -3.0527, -6.73659)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -6.737)
+modulate = Color(0.941176, 0.223529, 0.219608, 1)
 text = "Miss!"
 font = ExtResource("16_60uhs")
 font_size = 100
 outline_size = 0
-script = ExtResource("19_oa6cd")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MissText"]
 libraries = {
@@ -132,12 +143,17 @@ libraries = {
 }
 
 [node name="HitText" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0350444, -3.0527, -6.73659)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -6.737)
+modulate = Color(0.243137, 0.94902, 0.141176, 1)
 text = "Great!"
 font = ExtResource("16_60uhs")
 font_size = 100
 outline_size = 0
-script = ExtResource("19_oa6cd")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="HitText"]
+libraries = {
+"": SubResource("AnimationLibrary_ohldl")
+}
 
 [connection signal="body_entered" from="Bat/CollisionBox" to="Bat" method="_on_body_entered"]
 [connection signal="body_exited" from="Bat/CollisionBox" to="Bat" method="_on_body_exited"]
