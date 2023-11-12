@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dpvfjowh2mn4x" path="res://prefabs/animation_player.tscn" id="10_myhnj"]
 
 [node name="trash" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, -1.5)
 script = ExtResource("1_wf36i")
 
 [node name="Trash_Apple" parent="." groups=["trashObjects"] instance=ExtResource("2_ft8tk")]
