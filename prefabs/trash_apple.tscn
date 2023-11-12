@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvspt0dpgoi3d"]
+
+[ext_resource type="ArrayMesh" uid="uid://b7qw722ntrqva" path="res://assets/3DAssets/models_obj/Trash_Apple.obj" id="1_3mfwv"]
+[ext_resource type="Material" uid="uid://cfrmr730rvkhs" path="res://assets/3DAssets/models_obj/textures/textureMaterial.tres" id="2_3rd12"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pxc4j"]
+size = Vector3(0.134489, 0.346372, 0.149258)
+
+[node name="Trash_Bone" type="CharacterBody3D"]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+mesh = ExtResource("1_3mfwv")
+surface_material_override/0 = ExtResource("2_3rd12")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_pxc4j")

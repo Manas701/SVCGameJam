@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b7qw722ntrqva"
+path="res://.godot/imported/Trash_Apple.obj-1663b8c72ea3ef2ceafc51720835a195.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Trash_Apple.obj-1663b8c72ea3ef2ceafc51720835a195.mesh"]
+
+source_file="res://assets/3DAssets/models_obj/Trash_Apple.obj"
+dest_files=["res://.godot/imported/Trash_Apple.obj-1663b8c72ea3ef2ceafc51720835a195.mesh", "res://.godot/imported/Trash_Apple.obj-1663b8c72ea3ef2ceafc51720835a195.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
