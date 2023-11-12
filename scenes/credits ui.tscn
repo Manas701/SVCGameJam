@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://by0bgbcak7i6l"]
+[gd_scene load_steps=3 format=3 uid="uid://dxnfrrkg3ujf8"]
 
 [ext_resource type="FontFile" uid="uid://brlxgerq8nwag" path="res://assets/fonts/Chewy-Regular.ttf" id="1_t3ujt"]
 [ext_resource type="Script" path="res://assets/scripts/backButton.gd" id="2_w82uv"]
