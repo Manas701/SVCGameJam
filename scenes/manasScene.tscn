@@ -40,7 +40,7 @@ transform = Transform3D(0.315285, 0.948997, 0, -0.948997, 0.315285, 0, 0, 0, 1, 
 script = ExtResource("2_whjhi")
 
 [node name="trash" parent="." instance=ExtResource("7_wwkud")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, -1.5)
+transform = Transform3D(1, 0, 0, 0, 1, -2.89599e-05, 0, 2.89599e-05, 1, 0, 1.8, -3.5)
 
 [node name="AnimationPlayer" parent="trash" instance=ExtResource("7_gctov")]
 
@@ -54,3 +54,5 @@ transform = Transform3D(-3.49691e-08, 0, -0.8, 0, 0.8, 0, 0.8, 0, -3.49691e-08, 
 
 [node name="street_environment" parent="." instance=ExtResource("11_0d368")]
 transform = Transform3D(-3.49691e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.49691e-08, 0, -0.724239, -5.68252)
+
+[editable path="trash/AnimationPlayer"]

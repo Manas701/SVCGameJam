@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cm5b8lbkfdhdg"
+path="res://.godot/imported/UI_Arrow.obj-3196dfb2fa367237c29178e781a9a541.mesh"
+
+[deps]
+
+files=["res://.godot/imported/UI_Arrow.obj-3196dfb2fa367237c29178e781a9a541.mesh"]
+
+source_file="res://assets/3DAssets/models_obj/UI_Arrow.obj"
+dest_files=["res://.godot/imported/UI_Arrow.obj-3196dfb2fa367237c29178e781a9a541.mesh", "res://.godot/imported/UI_Arrow.obj-3196dfb2fa367237c29178e781a9a541.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
