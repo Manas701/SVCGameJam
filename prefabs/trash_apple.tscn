@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cvspt0dpgoi3d"]
+[gd_scene load_steps=4 format=3 uid="uid://l7ymf66qs6xr"]
 
 [ext_resource type="ArrayMesh" uid="uid://b7qw722ntrqva" path="res://assets/3DAssets/models_obj/Trash_Apple.obj" id="1_3mfwv"]
 [ext_resource type="Material" uid="uid://cfrmr730rvkhs" path="res://assets/3DAssets/models_obj/textures/textureMaterial.tres" id="2_3rd12"]
