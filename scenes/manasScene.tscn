@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cmk3w3urbdkri"]
+[gd_scene load_steps=16 format=3 uid="uid://cmk3w3urbdkri"]
 
 [ext_resource type="Script" path="res://assets/scripts/trash.gd" id="2_tnpwx"]
 [ext_resource type="Script" path="res://assets/scripts/bat.gd" id="2_whjhi"]
@@ -12,6 +12,23 @@
 [ext_resource type="PackedScene" path="res://prefabs/car_spawner.tscn" id="10_gh5mt"]
 [ext_resource type="PackedScene" path="res://prefabs/street_environment.tscn" id="11_0d368"]
 [ext_resource type="AudioStream" uid="uid://jup27d2nmt2o" path="res://assets/AudioAssets/game jam background music.wav" id="12_f6c4b"]
+[ext_resource type="PackedScene" uid="uid://xv0tk6gk4pe7" path="res://prefabs/ui_arrow.tscn" id="13_lmqbc"]
+
+[sub_resource type="Animation" id="Animation_5ov5y"]
+resource_name = "hover"
+loop_mode = 1
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0.5, -5, 0.5, 1, 0, 1, -5, 1, 1, 0, 0.5, -5)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rwlmp"]
+_data = {
+"hover": SubResource("Animation_5ov5y")
+}
 
 [node name="manasScene" type="Node3D"]
 
@@ -49,6 +66,15 @@ transform = Transform3D(1, 0, 0, 0, 1, -2.89599e-05, 0, 2.89599e-05, 1, 0, 1.8, 
 script = ExtResource("7_kxg3g")
 whichBin = "1"
 metadata/animName = ""
+
+[node name="UI_Arrow" parent="PlayerInput" instance=ExtResource("13_lmqbc")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.5, -5)
+skeleton = NodePath("../..")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerInput/UI_Arrow"]
+libraries = {
+"": SubResource("AnimationLibrary_rwlmp")
+}
 
 [node name="CarSpawner" parent="." instance=ExtResource("10_gh5mt")]
 transform = Transform3D(-3.49691e-08, 0, -0.8, 0, 0.8, 0, 0.8, 0, -3.49691e-08, 0, -0.724, -2.63026)
