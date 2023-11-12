@@ -9,3 +9,13 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+
+func _on_conductor_beat(position):
+	if position % 2 == 0:
+		print(position)
+		
+
+
+func _on_conductor_measure_signal(position):
+	pass # Replace with function body.

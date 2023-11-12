@@ -1,9 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://vx8thkpwhynj"]
+[gd_scene load_steps=2 format=3 uid="uid://vx8thkpwhynj"]
 
 [ext_resource type="ArrayMesh" uid="uid://bb1nqe4l5nrw" path="res://assets/3DAssets/models_obj/Street_Environment.obj" id="1_fsdnk"]
-[ext_resource type="Material" uid="uid://cfrmr730rvkhs" path="res://assets/3DAssets/models_obj/textures/textureMaterial.tres" id="2_5clsd"]
 
 [node name="street_environment" type="MeshInstance3D"]
 mesh = ExtResource("1_fsdnk")
-surface_material_override/0 = ExtResource("2_5clsd")
-surface_material_override/1 = ExtResource("2_5clsd")
